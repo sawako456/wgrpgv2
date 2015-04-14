@@ -1,0 +1,26 @@
+<?php
+
+$finder = Symfony\CS\Finder\DefaultFinder::create()
+    ->in(__DIR__ . '/app')
+    ->in(__DIR__ . '/config')
+    ->in(__DIR__ . '/database');
+
+return Symfony\CS\Config\Config::create()
+    ->level(Symfony\CS\FixerInterface::SYMFONY_LEVEL)
+    ->fixers(array(
+        'encoding',
+        'eof_ending',
+        'indentation',
+        'linefeed',
+        '-concat_without_spaces',
+        '-remove_lines_between_uses',
+        '-single_blank_line_before_namespace',
+        'concat_with_spaces',
+        '-blankline_after_open_tag',
+        'no_blank_lines_before_namespace',
+        '-namespace_no_leading_whitespace',
+        'ordered_use',
+        '-phpdoc_short_description',
+        '-phpdoc_no_empty_return'
+    ))
+    ->finder($finder);

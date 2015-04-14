@@ -1,0 +1,17 @@
+{
+  "name": "wgrpg",
+  "description": "WGRPGv3",
+  "version": "0.0.1",
+  "homepage": "http://cryptic.isnot.moe",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "angular-loader": "1.2.x",
+    "angular-mocks": "~1.2.x",
+    "bootstrap-sass-official": "~3.3.4",
+    "fontawesome": "~4.3.0",
+    "jquery": "~1.11.2"
+  }
+}
