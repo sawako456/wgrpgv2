@@ -18,12 +18,15 @@ var config = {
     bower: {
         path: './bower_components',
         fontawesome: {
-            files: './bower_components/fontawesome/fonts/**.*',
+            files: [
+                './bower_components/fontawesome/fonts/**.*',
+                './bower_components/bootstrap-sass-official/assets/fonts/bootstrap/**.*'
+            ],
             output: './public/fonts'
         }
     },
     sass: {
-        output: '../../sass/style.scss',
+        output: 'style.scss',
         loadPath: [
             './resources/sass',
             './bower_components/bootstrap-sass-official/assets/stylesheets',
@@ -31,14 +34,22 @@ var config = {
         ]
     },
     js: {
+        // TODO: Combine lib and app to one file?
         lib: {
             files: [
                 '../../bower_components/jquery/dist/jquery.min.js',
-                '../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
-                '../../bower_components/angular/angular.js',
-                '../../bower_components/angular-route/angular-route.js'
+                '../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap-sprockets.js',
+                '../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js'
+                // '../../bower_components/angular/angular.js',
+                // '../../bower_components/angular-route/angular-route.js'
             ],
             output: './public/js/lib.js'
+        },
+        app: {
+            files: [
+                'app.js',
+            ],
+            output: './public/js/app.js'
         }
     }
 };
@@ -74,5 +85,6 @@ elixir(function(mix) {
     mix.bower(config.bower.path)
         .icons(config.bower.fontawesome.files, config.bower.fontawesome.output)
         .sass(config.sass.output, null, {includePaths: config.sass.loadPath})
-        .scripts(config.js.lib.files, config.js.lib.output);
+        .scripts(config.js.lib.files, config.js.lib.output)
+        .scripts(config.js.app.files, config.js.app.output);
 });

@@ -173,3 +173,4 @@ build/Release
 .env
 .php_cs
 auth.json
+*.sublime-workspace

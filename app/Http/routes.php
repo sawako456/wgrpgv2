@@ -11,6 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-    return 'Nothing to see here, move along...';
+Route::get('/', [
+    'as' => 'index',
+    'uses' => 'WorldController@index',
+]);
+
+Route::group(['prefix' => 'auth'], function () {
+    Route::get('login', [
+        'as' => 'auth.login',
+        'uses' => 'AuthController@getLogin',
+    ]);
+
+    Route::post('login', [
+        'as' => 'auth.login.do',
+        'uses' => 'AuthController@postLogin',
+    ]);
+
+    Route::get('logout', [
+        'as' => 'auth.logout',
+        'uses' => 'AuthController@getLogout',
+    ]);
 });

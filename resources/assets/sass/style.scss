@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+// ====================================
+// Global vars
+// ====================================
+
+@import "settings/colors";
+
+// ====================================
+// Vendors
+// ====================================
+
+@import "bootstrap-sprockets";
+
+// Set variables that modify bootstrap look n feel here
+// List of available variables can be found here:
+//   http://getbootstrap.com/customize/#less-variables
+// Just remove the @ and replace it with $
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+$brand-primary: $primaryColor;
+$text-color: $paragraphColor;
+$link-color: $primaryColor;
+$link-hover-color: $primaryHoverColor;
+
+@import "bootstrap";
+@import "font-awesome";
+
+// ====================================
+// Foundation
+// ====================================
+
+@import "foundation/base";
+@import "foundation/typography";
+
+// ====================================
+// Components
+// ====================================
+
+@import "components/navbar";
+@import "components/form";

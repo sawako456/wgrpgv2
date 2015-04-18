@@ -17,9 +17,22 @@ Run gulp.
 
 sql-mode="traditional"
 
+{
+   "cmd": ["php artisan migrate:refresh --seed"],
+   "shell": true,
+   "working_dir": "${project_path:${folder}}"
+}
+
 ### Links
 
 http://cs.sensiolabs.org/
+
+#### TODO
+
+Need ints for:
+  * gender
+  * race
+  * item type
 
 ### License
 

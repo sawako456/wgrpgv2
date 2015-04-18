@@ -137,7 +137,7 @@ return [
         'Illuminate\View\ViewServiceProvider',
 
         /*
-         * Application Service Providers...
+         * Application service providers.
          */
         'Cryptic\Wgrpg\Providers\AppServiceProvider',
         'Cryptic\Wgrpg\Providers\BusServiceProvider',
@@ -145,6 +145,17 @@ return [
         'Cryptic\Wgrpg\Providers\EventServiceProvider',
         'Cryptic\Wgrpg\Providers\RouteServiceProvider',
         'Cryptic\Wgrpg\Providers\EntityServiceProvider',
+
+        /*
+         * Application repository service providers.
+         */
+
+        'Cryptic\Wgrpg\Providers\Event\RepositoryServiceProvider',
+        'Cryptic\Wgrpg\Providers\Map\RepositoryServiceProvider',
+        'Cryptic\Wgrpg\Providers\Role\RepositoryServiceProvider',
+        'Cryptic\Wgrpg\Providers\Tile\RepositoryServiceProvider',
+        'Cryptic\Wgrpg\Providers\User\RepositoryServiceProvider',
+        'Cryptic\Wgrpg\Providers\World\RepositoryServiceProvider',
 
     ],
 
