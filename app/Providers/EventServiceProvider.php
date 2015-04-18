@@ -11,8 +11,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'event.name' => [
-            'EventListener',
+        'auth.login' => [
+            'Cryptic\Wgrpg\Handlers\Events\Auth\LoginListener',
         ],
     ];
 
@@ -24,7 +24,5 @@ class EventServiceProvider extends ServiceProvider
     public function boot(DispatcherContract $events)
     {
         parent::boot($events);
-
-        //
     }
 }
