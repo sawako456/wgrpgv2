@@ -139,6 +139,7 @@ return [
         /*
          * Application service providers.
          */
+        'Cryptic\Wgrpg\Providers\AuthServiceProvider',
         'Cryptic\Wgrpg\Providers\AppServiceProvider',
         'Cryptic\Wgrpg\Providers\BusServiceProvider',
         'Cryptic\Wgrpg\Providers\ConfigServiceProvider',
