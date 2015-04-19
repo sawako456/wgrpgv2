@@ -174,3 +174,6 @@ build/Release
 .php_cs
 auth.json
 *.sublime-workspace
+public/css/
+public/js/
+public/fonts/

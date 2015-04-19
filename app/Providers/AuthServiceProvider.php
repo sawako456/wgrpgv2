@@ -17,7 +17,9 @@ class AuthServiceProvider extends ServiceProvider
 
             return new Guard(
                 $app->make('Illuminate\Auth\EloquentUserProvider', $model),
-                $this->app['session.store']
+                $this->app['session.store'],
+                null, // null or instanceof Request
+                $this->app->make('Cryptic\Wgrpg\Contracts\Repositories\User\Repository')
             );
         });
     }

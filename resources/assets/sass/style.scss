@@ -16,13 +16,13 @@
 // List of available variables can be found here:
 //   http://getbootstrap.com/customize/#less-variables
 // Just remove the @ and replace it with $
+$body-bg: $backgroundColor;
 $border-radius-base: 0;
 $border-radius-large: 0;
 $border-radius-small: 0;
 $brand-primary: $primaryColor;
 $text-color: $paragraphColor;
 $link-color: $primaryColor;
-$link-hover-color: $primaryHoverColor;
 
 @import "bootstrap";
 @import "font-awesome";
@@ -39,4 +39,6 @@ $link-hover-color: $primaryHoverColor;
 // ====================================
 
 @import "components/navbar";
+@import "components/sidebar";
 @import "components/form";
+@import "components/card";

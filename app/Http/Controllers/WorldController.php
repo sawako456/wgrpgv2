@@ -21,6 +21,7 @@ class WorldController extends Controller
     public function __construct(WorldRepositoryContract $worlds)
     {
         $this->middleware('auth');
+        $this->middleware('player');
 
         $this->worlds = $worlds;
     }

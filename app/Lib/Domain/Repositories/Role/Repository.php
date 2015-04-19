@@ -1,7 +1,6 @@
 <?php namespace Cryptic\Wgrpg\Lib\Domain\Repositories\Role;
 
 use Cryptic\Wgrpg\Contracts\Entities\Role as RoleEntityContract;
-use Cryptic\Wgrpg\Contracts\Entities\User as UserEntityContract;
 use Cryptic\Wgrpg\Contracts\Repositories\Role\Repository as RoleRepositoryContract;
 use Cryptic\Wgrpg\Lib\Domain\Repositories\Eloquent\AbstractRepository;
 

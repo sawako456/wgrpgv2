@@ -12,8 +12,8 @@
 */
 
 Route::get('/', [
-    'as' => 'index',
-    'uses' => 'WorldController@index',
+    'as' => 'dashboard',
+    'uses' => 'DashboardController@getDashboard',
 ]);
 
 Route::group(['prefix' => 'auth'], function () {
@@ -31,4 +31,23 @@ Route::group(['prefix' => 'auth'], function () {
         'as' => 'auth.logout',
         'uses' => 'AuthController@getLogout',
     ]);
+});
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+    Route::get('/', [
+        'as' => 'admin.dashboard',
+        'uses' => 'DashboardController@getDashboard',
+    ]);
+
+    Route::group(['prefix' => 'profile'], function () {
+        Route::get('edit', [
+            'as' => 'admin.profile.edit',
+            'uses' => 'ProfileController@edit',
+        ]);
+
+        Route::put('/', [
+            'as' => 'admin.profile.update',
+            'uses' => 'ProfileController@update',
+        ]);
+    });
 });

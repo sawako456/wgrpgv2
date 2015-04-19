@@ -4,6 +4,86 @@
 		"selected_items":
 		[
 			[
+				"auth",
+				"authenticate"
+			],
+			[
+				"hasR",
+				"hasRoles"
+			],
+			[
+				"Role",
+				"RoleEntityContract"
+			],
+			[
+				"for",
+				"for	for …"
+			],
+			[
+				"primar",
+				"primaryColor"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"World",
+				"WorldController"
+			],
+			[
+				"tex",
+				"textEntry"
+			],
+			[
+				"Tile",
+				"TileType"
+			],
+			[
+				"trigger",
+				"trigger_value_3"
+			],
+			[
+				"trig",
+				"trigger_value_2"
+			],
+			[
+				"bel",
+				"belongsTo"
+			],
+			[
+				"x",
+				"x"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"tin",
+				"tinyInteger"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"inte",
+				"integer"
+			],
+			[
+				"int",
+				"integer"
+			],
+			[
 				"manage_",
 				"manage_projects"
 			],
@@ -34,10 +114,6 @@
 			[
 				"manage",
 				"manageUsers"
-			],
-			[
-				"user",
-				"userProject"
 			],
 			[
 				"admin",
@@ -114,10 +190,6 @@
 			[
 				"max-",
 				"max-width"
-			],
-			[
-				"back",
-				"background-color"
 			],
 			[
 				"SASS",
@@ -363,13 +435,65 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "database/migrations/2015_04_14_210034_create_tables.php",
+			"settings":
+			{
+				"buffer_size": 20649,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/Admin/DashboardController.php",
+			"settings":
+			{
+				"buffer_size": 673,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/admin/dashboard.blade.php",
+			"settings":
+			{
+				"buffer_size": 282,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/components/admin/navbar.blade.php",
+			"settings":
+			{
+				"buffer_size": 960,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/assets/sass/foundation/_base.scss",
+			"settings":
+			{
+				"buffer_size": 132,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/assets/sass/style.scss",
+			"settings":
+			{
+				"buffer_size": 1016,
+				"line_ending": "Windows"
+			}
+		}
 	],
-	"build_system": "",
+	"build_system": "Packages/User/laravel-migrate-refresh-seed.sublime-build",
 	"command_palette":
 	{
 		"height": 375.0,
 		"selected_items":
 		[
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
 			[
 				"pac",
 				"Package Control: List Packages"
@@ -379,15 +503,11 @@
 				"Package Control: List Packages"
 			],
 			[
-				"pa",
-				"Package Control: Install Package"
-			],
-			[
 				"packa",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 386.0
+		"width": 498.0
 	},
 	"console":
 	{
@@ -404,134 +524,134 @@
 	},
 	"file_history":
 	[
-		"/F/var/www/wgrpgv2/bootstrap/app.php",
-		"/F/var/www/wgrpgv2/config/auth.php",
+		"/F/var/www/wgrpgv2/resources/views/admin/sidebar.blade.php",
+		"/F/var/www/wgrpgv2/resources/views/components/admin/sidebar.blade.php",
+		"/F/var/www/wgrpgv2/resources/views/layouts/admin.blade.php",
+		"/F/var/www/wgrpgv2/resources/assets/sass/foundation/_base.scss",
+		"/F/var/www/wgrpgv2/resources/assets/sass/foundation/_typography.scss",
+		"/F/var/www/wgrpgv2/resources/views/layouts/authenticated.blade.php",
+		"/F/var/www/wgrpgv2/app/Http/Controllers/DashboardController.php",
+		"/F/var/www/wgrpgv2/app/Http/Controllers/Admin/DashboardController.php",
+		"/F/var/www/wgrpgv2/app/Http/routes.php",
+		"/F/var/www/wgrpgv2/app/Http/Middleware/AdminRoleCheck.php",
+		"/F/var/www/wgrpgv2/app/Http/Middleware/PlayerRoleCheck.php",
+		"/F/var/www/wgrpgv2/app/Http/Controllers/AuthController.php",
+		"/F/var/www/wgrpgv2/app/Auth/Guard.php",
 		"/F/var/www/wgrpgv2/config/app.php",
-		"/F/var/www/wgrpgv2/app/Commands/Command.php",
-		"/F/var/www/wgrpgv2/app/Console/Commands/Inspire.php",
-		"/F/var/www/wgrpgv2/app/Console/Kernel.php",
-		"/F/var/www/wgrpgv2/app/Events/Event.php",
-		"/F/var/www/wgrpgv2/app/Exceptions/Handler.php",
-		"/F/var/www/wgrpgv2/app/Http/Controllers/Auth/AuthController.php",
-		"/F/var/www/wgrpgv2/app/Http/Controllers/Auth/PasswordController.php",
-		"/F/var/www/wgrpgv2/app/Http/Controllers/Controller.php",
-		"/F/var/www/wgrpgv2/app/Http/Controllers/HomeController.php",
-		"/F/var/www/wgrpgv2/app/Http/Controllers/WelcomeController.php",
 		"/F/var/www/wgrpgv2/app/Http/Kernel.php",
+		"/F/var/www/wgrpgv2/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Entities/User.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Entities/User.php",
+		"/F/var/www/wgrpgv2/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
+		"/F/var/www/wgrpgv2/vendor/laravel/framework/src/Illuminate/Auth/Guard.php",
+		"/F/var/www/wgrpgv2/app/Providers/AuthServiceProvider.php",
+		"/F/var/www/wgrpgv2/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Repositories/Role/Repository.php",
+		"/F/var/www/wgrpgv2/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php",
+		"/F/var/www/wgrpgv2/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+		"/F/var/www/wgrpgv2/config/auth.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Auth/Guard.php",
+		"/F/var/www/wgrpgv2/app/Providers/EventServiceProvider.php",
+		"/F/var/www/wgrpgv2/app/Handlers/Events/Auth/LoginListener.php",
 		"/F/var/www/wgrpgv2/app/Http/Middleware/Authenticate.php",
 		"/F/var/www/wgrpgv2/app/Http/Middleware/RedirectIfAuthenticated.php",
-		"/F/var/www/wgrpgv2/app/Http/Middleware/VerifyCsrfToken.php",
-		"/F/var/www/wgrpgv2/app/Http/Requests/Request.php",
-		"/F/var/www/wgrpgv2/app/Providers/AppServiceProvider.php",
-		"/F/var/www/wgrpgv2/app/Providers/BusServiceProvider.php",
-		"/F/var/www/wgrpgv2/app/Providers/ConfigServiceProvider.php",
-		"/F/var/www/wgrpgv2/app/Providers/EventServiceProvider.php",
-		"/F/var/www/wgrpgv2/app/Providers/RouteServiceProvider.php",
-		"/F/var/www/wgrpgv2/app/Services/Registrar.php",
-		"/F/var/www/wgrpgv2/app/User.php",
-		"/F/var/www/wgrpgv2/composer.json",
+		"/F/var/www/wgrpgv2/.gitignore",
+		"/F/var/www/wgrpgv2/database/seeds/MapSeeder.php",
+		"/F/var/www/wgrpgv2/gulpfile.js",
+		"/F/var/www/wgrpgv2/resources/js/app.js",
+		"/F/var/www/wgrpgv2/resources/views/world/select.blade.php",
+		"/F/var/www/wgrpgv2/resources/views/layouts/master.blade.php",
+		"/F/var/www/wgrpgv2/resources/lang/en/maps.php",
+		"/F/var/www/wgrpgv2/resources/assets/sass/style.scss",
+		"/F/var/www/wgrpgv2/resources/assets/sass/settings/_colors.scss",
+		"/F/var/www/wgrpgv2/app/Http/Controllers/WorldController.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Entities/Map.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Entities/Tile.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Entities/Map.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Entities/Tile.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Entities/World.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Entities/World.php",
+		"/F/var/www/wgrpgv2/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
+		"/F/var/www/wgrpgv2/vendor/laravel/framework/src/Illuminate/Http/RedirectResponse.php",
+		"/F/var/www/wgrpgv2/resources/views/auth/login.blade.php",
+		"/F/var/www/wgrpgv2/app/Http/Requests/Auth/LoginRequest.php",
+		"/F/var/www/wgrpgv2/resources/lang/en/general.php",
+		"/F/var/www/wgrpgv2/resources/lang/en/auth.php",
+		"/F/var/www/wgrpgv2/resources/assets/sass/components/_form.scss",
+		"/F/var/www/wgrpgv2/resources/assets/sass/components/_navbar.scss",
+		"/F/var/www/wgrpgv2/resources/sass/foundation/_base.scss",
+		"/F/var/www/wgrpgv2/resources/sass/foundation/_typography.scss",
+		"/F/var/www/wgrpgv2/resources/sass/style.scss",
+		"/F/var/www/wgrpgv2/resources/sass/components/_navbar.scss",
+		"/F/var/www/wgrpgv2/resources/sass/settings/_colors.scss",
+		"/F/var/www/wgrpgv2/resources/views/partials/meta.blade.php",
+		"/F/var/www/wgrpgv2/resources/views/layouts/default.blade.php",
+		"/F/wamp/logs/php_error.log",
+		"/F/wamp/bin/apache/Apache2.4.4/logs/wgrpg.localhost.dev-error.log",
+		"/F/wamp/logs/apache_error.log",
+		"/F/downloads/misc/index.php",
+		"/F/var/www/wgrpgv2/database/seeds/WorldSeeder.php",
+		"/F/var/www/wgrpgv2/database/seeds/DatabaseSeeder.php",
+		"/F/var/www/wgrpgv2/database/seeds/EventSeeder.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Constants/Tile/State.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Constants/Tile/Type.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Constants/Event/Type.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Constants/Map/Type.php",
+		"/F/var/www/wgrpgv2/app/Providers/ConstantServiceProvider.php",
+		"/F/var/www/wgrpgv2/vendor/symfony/debug/Symfony/Component/Debug/Exception/FatalErrorException.php",
+		"/F/var/www/wgrpgv2/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/FatalErrorException.php",
+		"/F/var/www/wgrpgv2/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/HttpException.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Repositories/Tile/Repository.php",
+		"/F/var/www/wgrpgv2/app/Providers/Tile/RepositoryServiceProvider.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Repositories/Tile/Repository.php",
+		"/F/var/www/wgrpgv2/app/Providers/EntityServiceProvider.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Entities/Event.php",
+		"/F/var/www/wgrpgv2/app/Providers/Event/RepositoryServiceProvider.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Repositories/Event/Repository.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Repositories/Event/Repository.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Entities/Event.php",
+		"/F/var/www/wgrpgv2/app/Providers/Map/RepositoryServiceProvider.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Repositories/Map/Repository.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Repositories/Map/Repository.php",
+		"/F/var/www/wgrpgv2/bootstrap/app.php",
+		"/F/var/www/wgrpgv2/app/Providers/World/RepositoryServiceProvider.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Repositories/World/Repository.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Entities/Role.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Repositories/World/Repository.php",
+		"/F/var/www/wgrpgv2/database/seeds/UserSeeder.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Repositories/Eloquent/AbstractRepository.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Repositories/Eloquent/Repository.php",
+		"/F/var/www/wgrpgv2/.env",
+		"/F/var/www/wgrpgv2/.env.example",
+		"/F/var/www/wgrpgv2/app/Contracts/Entities/Role.php",
+		"/F/var/www/wgrpgv2/app/Providers/Role/RepositoryServiceProvider.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Repositories/Role/Repository.php",
+		"/F/var/www/wgrpgv2/app/Lib/Domain/Repositories/User/Repository.php",
+		"/F/var/www/wgrpgv2/database/migrations/2015_04_14_210034_create_tables.php",
+		"/F/var/www/wgrpgv2/app/Providers/User/RepositoryServiceProvider.php",
+		"/F/var/www/wgrpgv2/app/Providers/User/Repository/ServiceProvider.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Repositories/User/Repository.php",
 		"/F/var/www/wgrpgv2/readme.md",
-		"/F/var/www/thetribe/resources/sass/components/_navbar.scss",
-		"/F/var/www/thetribe/resources/sass/settings/_colors.scss",
-		"/F/var/www/thetribe/src/app.js",
-		"/F/var/www/thetribe/app/index.html",
-		"/F/var/www/thetribe/src/views/view2/view2.js",
-		"/F/var/www/thetribe/src/views/view1/view1.js",
-		"/F/var/www/thetribe/app/assets/js/app.js",
-		"/F/var/www/thetribe/resources/sass/style.scss",
+		"/F/var/www/wgrpgv2/app/Contracts/Repository/Eloquent/Repository.php",
+		"/F/var/www/wgrpgv2/.php_cs",
+		"/F/downloads/misc/wgrpg_dump.sql",
+		"/F/var/www/wgrpgv2/v2/SQL/createTables.sql",
+		"/C/Users/Linus/AppData/Roaming/Sublime Text 2/Packages/User/laravel-migrate-refresh-seed.sublime-build",
 		"/C/Users/Linus/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/F/var/www/wgrpgv2/vendor/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php",
+		"/F/var/www/wgrpgv2/vendor/laravel/framework/src/Illuminate/Auth/Authenticatable.php",
+		"/F/var/www/wgrpgv2/app/Contracts/Entities/Eloquent.php",
+		"/F/var/www/thetribe/gulpfile.js",
+		"/F/var/www/wgrpgv2/package.json",
+		"/F/var/www/wgrpgv2/bower.json",
+		"/F/var/www/wgrpgv2/bower_components/jquery/dist/jquery.js",
+		"/F/var/www/thetribe/bower.json",
 		"/F/var/www/thetribe/package.json",
-		"/F/wamp/bin/apache/Apache2.4.4/conf/extra/httpd-vhosts.conf",
-		"/F/var/www/thetribe/karma.conf.js",
-		"/F/var/www/thetribe/.bowerrc",
-		"/H/Anime/desktop.ini",
-		"/F/var/www/soud.se/app/controllers/time/ProjectController.php",
-		"/F/var/www/soud.se/app/views/time/project/index.blade.php",
-		"/F/var/www/soud.se/app/start/global.php",
-		"/F/downloads/misc/linus_2014.txt",
-		"/F/var/www/soud.se/app/routes.php",
-		"/C/Users/Linus/.ssh/id_rsa.pub",
-		"/F/var/www/soud.se/app/views/dashboard/project/index.blade.php",
-		"/F/var/www/soud.se/app/database/seeds/PermissionTableSeeder.php",
-		"/F/var/www/soud.se/app/views/includes/navbar.blade.php",
-		"/F/var/www/soud.se/app/views/dashboard/sidebar.blade.php",
-		"/F/var/www/soud.se/vendor/laravel/framework/src/Illuminate/Pagination/views/slider-3.php",
-		"/F/var/www/soud.se/app/views/account/sidebar.blade.php",
-		"/F/var/www/soud.se/app/views/account/profile/index.blade.php",
-		"/F/var/www/soud.se/app/controllers/account/ProfileController.php",
-		"/F/var/www/soud.se/bootstrap/start.php",
-		"/F/Program Files (x86)/Git/etc/gitconfig",
-		"/C/Users/Linus/.ssh/github_rsa.pub",
-		"/C/Users/Linus/.ssh/config",
-		"/F/cygwin64/home/Linus/.ssh/id_rsa.pub",
-		"/F/Program Files (x86)/Git/ssl/openssl.cnf",
-		"/C/Users/Linus/.ssh/known_hosts",
-		"/C/Users/Linus/.gitconfig",
-		"/F/wamp/bin/apache/Apache2.4.4/logs/localhost.soud-error.log",
-		"/F/var/www/soud.se/app/controllers/AuthController.php",
-		"/F/var/www/soud.se/app/controllers/HomeController.php",
-		"/F/var/www/soud.se/app/controllers/DashboardController.php",
-		"/F/var/www/soud.se/app/models/User.php",
-		"/F/var/www/soud.se/app/views/errors/404.blade.php",
-		"/F/var/www/soud.se/app/database/seeds/StatusTableSeeder.php",
-		"/F/var/www/soud.se/app/config/mail.php",
-		"/F/wamp/bin/php/php5.4.12/php.ini",
-		"/F/var/www/soud.se/app/storage/logs/laravel.log",
-		"/F/var/www/soud.se/app/controllers/BaseController.php",
-		"/F/var/www/soud.se/app/views/layouts/dashboard.blade.php",
-		"/F/var/www/soud.se/app/views/dashboard/index.blade.php",
-		"/F/var/www/soud.se/app/database/migrations/2014_11_27_225252_create_statuses_table.php",
-		"/F/var/www/soud.se/app/database/seeds/UserTableSeeder.php",
-		"/F/var/www/soud.se/app/database/migrations/2014_03_24_163724_create_users_table.php",
-		"/F/var/www/soud.se/app/database/migrations/2014_12_06_173900_user_data_and_permissions.php",
-		"/F/var/www/soud.se/app/database/seeds/DatabaseSeeder.php",
-		"/F/var/www/soud.se/app/database/seeds/RoleTableSeeder.php",
-		"/F/var/www/soud.se/app/database/migrations/2014_12_05_223704_add_status_class.php",
-		"/F/var/www/soud.se/app/database/seeds/ProjectTableSeeder.php",
-		"/F/var/www/soud.se/app/config/auth.php",
-		"/F/var/www/soud.se/app/config/app.php",
-		"/F/var/www/soud.se/app/models/Role.php",
-		"/F/var/www/soud.se/app/models/Permission.php",
-		"/F/var/www/soud.se/composer.json",
-		"/F/var/www/soud.se/app/database/seeds/UserTableSeeder.sample.php",
-		"/C/Users/Linus/AppData/Roaming/Sublime Text 2/Packages/User/PHP.sublime-settings",
-		"/F/var/www/soud.se/app/models/Project.php",
-		"/F/var/www/soud.se/app/models/Status.php",
-		"/F/var/www/soud.se/app/models/Timeperiod.php",
-		"/F/var/www/soud.se/app/database/migrations/2014_12_05_222707_add_relationships.php",
-		"/F/var/www/soud.se/app/database/migrations/2014_05_26_160802_create_projects_table.php",
-		"/F/var/www/soud.se/app/database/migrations/2014_11_27_223453_create_timeperiods_table.php",
-		"/F/var/www/soud.se/app/database/migrations/2014_12_05_221808_create_user_project.php",
-		"/F/var/www/soud.se/app/controllers/Dashboard/ProjectController.php",
-		"/F/var/www/soud.se/app/views/dashboard/project/create.blade.php",
-		"/F/var/www/soud.se/app/views/dashboard/navbar.blade.php",
-		"/F/var/www/soud.se/app/views/dashboard/project/edit.blade.php",
-		"/F/var/www/soud.se/app/views/layouts/master.blade.php",
-		"/F/var/www/soud.se/build.sh",
-		"/F/var/www/soud.se/public_html/sass/dashboard/style.scss",
-		"/F/var/www/soud.se/public_html/sass/dashboard/navbar.scss",
-		"/F/var/www/soud.se/public_html/sass/dashboard/sidebar.scss",
-		"/F/var/www/soud.se/public_html/sass/_colors.scss",
-		"/F/var/www/soud.se/public_html/sass/_variables.scss",
-		"/F/var/www/soud.se/public_html/sass/style.scss",
-		"/F/var/www/soud.se/public_html/sass/auth.scss",
-		"/F/var/www/soud.se/app/views/auth/login.blade.php",
-		"/F/var/www/soud.se/public_html/sass/variables.scss",
-		"/F/var/www/soud.se/public_html/sass/colors.scss",
-		"/F/var/www/soud.se/public_html/sass/mixins.scss",
-		"/F/var/www/soud.se/app/views/welcome/index.blade.php",
-		"/F/var/www/soud.se/.gitignore",
-		"/F/var/www/soud.se/readme.md",
-		"/F/downloads/dev_stuff/bootstrap-3.3.1-dist/dist/js/npm.js",
-		"/F/var/www/soud.se/app/views/projects/index.blade.php",
-		"/F/var/www/soud.se/app/views/dashboard/project/show.blade.php",
-		"/F/var/www/soud.se/public_html/css/master.css",
-		"/F/var/www/soud.se/app/config/database.php",
-		"/F/downloads/dev_stuff/soud.sql",
-		"/F/var/www/soud.se/app/config/database.sample.php",
-		"/F/var/www/soud.se/app/config/app.sample.php",
-		"/F/var/www/soud.se/app/config/testing/database.sample.php",
-		"/F/var/www/soud.se/public_html/css/dashboard/dashboard.css"
+		"/F/var/www/wgrpgv2/.php_cs.dist",
+		"/F/var/www/wgrpgv2/.gitattributes",
+		"/F/var/www/wgrpgv2/app/Console/Kernel.php",
+		"/F/var/www/wgrpgv2/app/Events/Event.php",
+		"/F/var/www/wgrpgv2/app/Exceptions/Handler.php"
 	],
 	"find":
 	{
@@ -539,7 +659,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 92.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"F:\\var\\www\\wgrpgv2\\app\\,-*.sql,-*.min.js,-*.min.css,-*.sample.php",
@@ -551,137 +671,137 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
-			"\\WGRGP",
-			"WGRGP",
-			"WGRPG",
-			"Cryptic\\\\",
-			"tribe",
-			"contact",
-			"about",
-			"Tribe",
-			"Contact",
-			"app",
-			"1",
-			"resources",
-			"myApp",
-			"app",
-			"rsc",
-			"lib",
-			"localhost.plife",
-			"app/",
-			"+",
-			"account",
-			"manage_settings",
-			"manage_projects",
-			"Admin",
-			"dashboard",
-			"+",
-			"slider-3",
-			"slider::3",
-			"         ",
-			"confirm_password",
-			"current_password",
-			"New",
-			"new_password",
-			"current_password",
-			"password",
-			"col-sm-3 control-label",
-			"col-sm-9",
+			"role",
+			"var",
+			"user",
+			"provider",
+			"params",
+			"Event",
+			"Entities",
+			"user",
+			"event",
+			"Repositories",
 			"name",
-			"first_name",
+			"home",
+			"lib",
+			"dungeon",
+			"please",
+			"haystack",
+			"#f2dede",
+			"badge",
+			"TILE",
+			"ASC",
+			"return",
+			"void",
+			"required",
+			"inputPassword",
 			"email",
-			"exclamation",
-			"Regex:",
-			"re",
-			"Re",
-			"regex",
-			"alpha_dash",
-			"Dashboard",
-			"company",
-			"phone",
-			"last_name",
-			"first_name",
-			"project",
-			"credit_card",
-			"company",
-			"phone",
-			"HomeController",
-			"update",
-			"col-sm-10",
-			"col-sm-2",
-			"First",
-			"text",
-			"ey",
-			"pull-right",
-			"phone",
-			"first_name",
-			"col-sm-10",
-			"phone",
-			"Phone",
-			"phone",
-			"Phone",
-			"phone",
-			"last_name",
-			"Personal",
-			"details",
-			"first_name",
-			"irst_",
-			"project",
-			"Profile",
-			"Overview",
-			"dashboard",
-			"Projects",
-			"Overview",
-			"manage",
-			"manageProjects",
-			"admin",
-			"manageProjects",
-			"_Set",
-			"Users",
-			"users",
-			"Users",
-			"users",
-			"Users",
-			"view_users",
-			"viewUsers",
-			"view_projects",
-			"viewProjects",
-			"viewOthersProject",
-			"manageProjects",
-			"sendm",
-			"SMTP",
-			"On",
-			"O",
-			"Hold",
-			"Trollhättan",
-			"Sörensen",
-			"soud",
-			"se",
-			"soud",
-			"linus",
-			"url",
-			"last_name",
-			"phone",
-			"last_name",
-			"phone",
-			"first_name",
-			"password",
-			"string",
+			"inputEmail",
+			"paragraphHighlightColor",
+			"paragraphColor",
+			"paragraph",
+			"Vendors",
+			"///",
+			"*",
+			"md",
+			"Password",
+			"auth",
+			"width",
+			"paragraphHighlightColour",
+			"paragraphColour",
+			"backgroundHighlightColour",
+			"backgroundColour",
+			"Colour",
+			"colHighlight",
+			"colColour",
+			"colHighlight",
+			"colDefault",
+			"bgHighlight",
+			"bgDefault",
+			"Vendors",
+			"content",
+			"css",
+			"style",
+			"meta",
+			"View",
+			"getLogin",
+			"profile",
+			"showProfile",
+			"page",
+			"// == == == == == == == == ==",
+			"== == == == == == == ==",
+			"== == == == == == ==",
+			"===",
+			"==",
+			"= ",
+			"textEntry",
+			"text_entry",
+			"textEntry",
+			"haystack",
+			"NONE",
+			"LOCKED",
+			"NONE",
+			"Event",
+			"PLAINS",
+			"DUNGEON",
+			"VILLAGE",
+			"PLAINS",
+			"NONE",
+			"CAVE",
+			"CASTLE_CITY",
+			"TOWN",
+			"VILLAGE",
+			"DUNGEON",
+			"PLAINS",
+			"NONE",
+			"DEFAULT",
+			"Types",
+			"User",
+			"Repository",
+			"UserEntityContract",
+			"UserRepositoryContract",
+			"User",
+			"maps",
+			"->all()",
+			"worlds",
+			"tinyInteger",
+			"integer",
+			"map_id",
+			"User",
+			"MapEntityContract",
+			"TileEntityContract",
+			"Map",
+			"world_id",
+			"integer",
 			"nullable",
-			"company",
-			"url",
-			"display_name",
-			"last_name",
-			"first_name",
-			"project",
-			"Project",
-			"project",
-			"first",
-			"userRole",
-			"user"
+			"type",
+			"index",
+			"user_id",
+			"open",
+			"boolean",
+			"Wall",
+			"Dungeon",
+			"corridor",
+			"Plains",
+			"type",
+			"maps",
+			"map_id",
+			"unsigned",
+			"x",
+			"event",
+			"map",
+			"EventSeeder",
+			"Map",
+			"$this->app->bind('Cryptic\\Wgrpg\\Contracts\\Entities\\Map',\n            'Cryptic\\Wgrpg\\Lib\\Domain\\Entities\\Map');",
+			"Map",
+			"MapRepositoryContract",
+			"MapEntityContract",
+			"Map",
+			"MapEntityContract",
+			"Map"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -689,6 +809,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"namespace",
 			"Wgrpg",
 			"Cryptic\\",
 			"normteknik-blue"
@@ -702,8 +823,727 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "database/migrations/2015_04_14_210034_create_tables.php",
+					"settings":
+					{
+						"buffer_size": 20649,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3110,
+								3110
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"devel": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": "load-save",
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Http/Controllers/Admin/DashboardController.php",
+					"settings":
+					{
+						"buffer_size": 673,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								661,
+								661
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"devel": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": "load-save",
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "resources/views/admin/dashboard.blade.php",
+					"settings":
+					{
+						"buffer_size": 282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								246,
+								246
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"devel": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": "load-save",
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/views/components/admin/navbar.blade.php",
+					"settings":
+					{
+						"buffer_size": 960,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33,
+								33
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"devel": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": "load-save",
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "resources/assets/sass/foundation/_base.scss",
+					"settings":
+					{
+						"buffer_size": 132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								101,
+								101
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"devel": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": "load-save",
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "resources/assets/sass/style.scss",
+					"settings":
+					{
+						"buffer_size": 1016,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								661,
+								661
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"devel": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": "load-save",
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -738,6 +1578,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 120.0
+	},
 	"output.sftp":
 	{
 		"height": 120.0
@@ -752,6 +1596,94 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"guard",
+				"app/Auth/Guard.php"
+			],
+			[
+				"eloquentbuilder",
+				"vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php"
+			],
+			[
+				"model",
+				"vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php"
+			],
+			[
+				"app",
+				"config/app.php"
+			],
+			[
+				"builder",
+				"vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php"
+			],
+			[
+				"eloquentuserprovider",
+				"vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php"
+			],
+			[
+				"",
+				"vendor/laravel/framework/src/Illuminate/Container/Container.php"
+			],
+			[
+				"containe",
+				"vendor/laravel/framework/src/Illuminate/Container/Container.php"
+			],
+			[
+				"eloquentuser",
+				"vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php"
+			],
+			[
+				"auth.",
+				"config/auth.php"
+			],
+			[
+				"redirectrespo",
+				"vendor/laravel/framework/src/Illuminate/Http/RedirectResponse.php"
+			],
+			[
+				"authenticaand",
+				"vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php"
+			],
+			[
+				"rout",
+				"app/Http/routes.php"
+			],
+			[
+				"authenticatean",
+				"vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php"
+			],
+			[
+				"rou",
+				"app/Http/routes.php"
+			],
+			[
+				"authenticateand",
+				"vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php"
+			],
+			[
+				"fatalerrorexception",
+				"vendor/symfony/debug/Symfony/Component/Debug/Exception/FatalErrorException.php"
+			],
+			[
+				"httpexception",
+				"vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Exception/HttpException.php"
+			],
+			[
+				"eloquentmodel",
+				"vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php"
+			],
+			[
+				"route",
+				"app/Http/routes.php"
+			],
+			[
+				"canresetpassword",
+				"vendor/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php"
+			],
+			[
+				"authenticatable",
+				"vendor/laravel/framework/src/Illuminate/Auth/Authenticatable.php"
+			]
 		],
 		"width": 0.0
 	},
@@ -767,6 +1699,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 209.0,
+	"side_bar_width": 245.0,
 	"status_bar_visible": true
 }

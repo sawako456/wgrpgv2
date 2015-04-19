@@ -16,7 +16,7 @@ class AuthController extends Controller
      *
      * @param \Illuminate\Contracts\Auth\Guard $auth
      *
-     * @return \Illuminate\Http\RedirectResponse
+     * @return void
      */
     public function __construct(Guard $auth)
     {
@@ -49,8 +49,10 @@ class AuthController extends Controller
         $credentials = $request->only('username', 'password');
 
         if ($this->auth->attempt($credentials, $request->has('remember'))) {
-            return redirect()->intended('/');
+            return redirect()->intended($this->resolveRedirectRoute());
         }
+
+        // TODO: Flash error messages?
 
         return redirect()->route('auth.login')
             ->withInput($request->only('username', 'remember'));
@@ -66,5 +68,14 @@ class AuthController extends Controller
         $this->auth->logout();
 
         return redirect()->route('auth.login');
+    }
+
+    protected function resolveRedirectRoute()
+    {
+        if ($this->auth->hasRole('Admin')) {
+            return route('admin.dashboard');
+        }
+
+        return route('dashboard');
     }
 }

@@ -7,58 +7,137 @@ $dropDown: true;
 .navbar-default {
   background-color: $backgroundColor;
   border-color: $backgroundHighlightColor;
+
   .navbar-brand {
     color: $primaryColor;
-    &:hover, &:focus {
-      color: $primaryHighlightColor; }}
+
+    &:hover,
+    &:focus {
+      color: $primaryHighlightColor;
+    }
+  }
+
   .navbar-text {
-    color: $primaryColor; }
+    color: $primaryColor;
+  }
+
   .navbar-nav {
     > li {
       > a {
         color: $primaryColor;
-        &:hover,  &:focus {
-          color: $primaryHighlightColor; }}
+
+        &.navbar-avatar {
+          padding: 15px;
+
+          @media(min-width: 768px) {
+            padding: 5px;
+          }
+
+          .avatar {
+            display: none;
+            width: 40px;
+            max-width: 100%;
+            height: 40px;
+            max-height: 100%;
+
+            @media(min-width: 768px) {
+              display: block;
+            }
+          }
+        }
+
+        &:hover,
+        &:focus {
+          color: $primaryHighlightColor;
+          background-color: $backgroundHighlightColor;
+        }
+      }
+
       @if $dropDown {
         > .dropdown-menu {
           background-color: $backgroundColor;
+
           > li > a {
             color: $primaryColor;
-            &:hover,  &:focus {
+
+            &:hover,
+            &:focus {
               color: $primaryHighlightColor;
-              background-color: $backgroundHighlightColor; }}
+              background-color: $backgroundHighlightColor;
+            }
+          }
+
           .divider {
-            background-color: $backgroundHighlightColor;}}}
+            background-color: $backgroundHighlightColor;
+          }
+        }
+      }
     }
+
     > .active {
-      > a, > a:hover, > a:focus {
+      > a,
+      > a:hover,
+      > a:focus {
         color: $primaryHighlightColor;
-        background-color: $backgroundHighlightColor; }}
+        background-color: $backgroundHighlightColor;
+      }
+    }
+
     > .open {
-      > a, > a:hover, > a:focus {
+      > a,
+      > a:hover,
+      > a:focus {
         color: $primaryHighlightColor;
-        background-color: $backgroundHighlightColor; }}}
+        background-color: $backgroundHighlightColor;
+      }
+    }
+  }
+
   .navbar-toggle {
     border-color: $backgroundHighlightColor;
-    &:hover, &:focus {
-      background-color: $backgroundHighlightColor; }
+
+    &:hover,
+    &:focus {
+      background-color: $backgroundHighlightColor;
+    }
+
     .icon-bar {
-      background-color: $primaryColor; }}
+      background-color: $primaryColor;
+    }
+  }
+
   .navbar-collapse,
   .navbar-form {
-    border-color: $primaryColor; }
+    border-color: $primaryColor;
+  }
+
   .navbar-link {
     color: $primaryColor;
+
     &:hover {
-      color: $primaryHighlightColor; }}}
-@media (max-width: 767px) {
+      color: $primaryHighlightColor;
+    }
+  }
+}
+
+@media(max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu {
     > li > a {
       color: $primaryColor;
-      &:hover, &:focus {
-        color: $primaryHighlightColor; }}
-    > .active {
-      > a, > a:hover, > a:focus {
+
+      &:hover,
+      &:focus {
         color: $primaryHighlightColor;
-        background-color: $backgroundHighlightColor; }}}
+      }
+    }
+
+    > .active {
+      > a,
+      > a:hover,
+      > a:focus {
+        color: $primaryHighlightColor;
+        background-color: $backgroundHighlightColor;
+      }
+    }
+  }
 }

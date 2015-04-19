@@ -146,6 +146,8 @@ return [
         'Cryptic\Wgrpg\Providers\EventServiceProvider',
         'Cryptic\Wgrpg\Providers\RouteServiceProvider',
         'Cryptic\Wgrpg\Providers\EntityServiceProvider',
+        'Cryptic\Wgrpg\Providers\ComposerServiceProvider',
+        'Cryptic\Wgrpg\Providers\ValidationServiceProvider',
 
         /*
          * Application repository service providers.

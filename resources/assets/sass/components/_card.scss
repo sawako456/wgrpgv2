@@ -1,0 +1,15 @@
+// ====================================
+// Form element styling
+// ====================================
+
+.card {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: $secondaryBackgroundColor;
+
+  .card-header {
+    margin-top: 0;
+    border-bottom: 1px solid $primaryColor;
+    color: $primaryColor;
+  }
+}

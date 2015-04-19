@@ -27,5 +27,7 @@ class Kernel extends HttpKernel
         'auth' => 'Cryptic\Wgrpg\Http\Middleware\Authenticate',
         'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
         'guest' => 'Cryptic\Wgrpg\Http\Middleware\RedirectIfAuthenticated',
+        'admin' => 'Cryptic\Wgrpg\Http\Middleware\AdminRoleCheck',
+        'player' => 'Cryptic\Wgrpg\Http\Middleware\PlayerRoleCheck',
     ];
 }

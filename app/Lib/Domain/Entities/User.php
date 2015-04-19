@@ -1,14 +1,12 @@
 <?php namespace Cryptic\Wgrpg\Lib\Domain\Entities;
 
 use Cryptic\Wgrpg\Contracts\Entities\User as UserEntityContract;
-use Cryptic\Wgrpg\Contracts\Entities\Role as RoleEntityContract;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract, UserEntityContract
 {
@@ -43,24 +41,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     protected $dates = ['deleted_at'];
 
     /**
-     * Check if user has role.
-     * WARNING: Eloquent usage outside of repository!
+     * Get a gravatar url based on user email.
+     * Uses the mystery man default if no avatar is found.
      *
-     * @param mixed $role
-     *
-     * @return bool
+     * @return string
      */
-    public function hasRole($role)
+    public function getGravatarAttribute()
     {
-        return $this->whereHas('roles', function (QueryBuilder $query) use ($role) {
-                $name = $role;
+        $hash = md5(strtolower(trim($this->attributes['email'])));
 
-                if ($role instanceof RoleEntityContract) {
-                    $name = $role->name;
-                }
-
-                $query->where('roles.name', $name);
-            })->count() !== 0;
+        return 'http://www.gravatar.com/avatar/' . $hash . '?d=mm';
     }
 
     /**

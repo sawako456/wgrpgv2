@@ -14,9 +14,8 @@ class UserSeeder extends Seeder
         DB::table('roles')->delete();
         DB::table('users')->delete();
 
-        $users = App::make('Cryptic\Wgrpg\Contracts\Repositories\User\Repository');
         $roles = App::make('Cryptic\Wgrpg\Contracts\Repositories\Role\Repository');
-        $createAdmin = (bool) env('ROOT_USER_USERNAME', false);
+        $users = App::make('Cryptic\Wgrpg\Contracts\Repositories\User\Repository');
 
         $roleData = [
             ['name' => 'Login'],
@@ -28,16 +27,35 @@ class UserSeeder extends Seeder
             $roles->create($role);
         }
 
-        if ($createAdmin) {
-            $username = env('ROOT_USER_USERNAME');
-            $email = env('ROOT_USER_EMAIL');
-            $password = Hash::make(env('ROOT_USER_PASSWORD'));
+        $admins = [];
+        $adminRoles = $roles->getWhereIn('name', ['Login', 'Admin'])->lists('id');
 
-            $root = $users->create(compact('username', 'email', 'password'));
+        if (env('ADMIN_USER_1_USERNAME')) {
+            $username = env('ADMIN_USER_1_USERNAME');
+            $email = env('ADMIN_USER_1_EMAIL');
+            $password = Hash::make(env('ADMIN_USER_1_PASSWORD'));
+            $admin1 = $users->create(compact('username', 'email', 'password'));
+            $admins[] = $admin1;
+        }
 
-            $adminRoles = $roles->getWhereIn('name', ['Login', 'Admin'])->lists('id');
+        if (env('ADMIN_USER_2_USERNAME')) {
+            $username = env('ADMIN_USER_2_USERNAME');
+            $email = env('ADMIN_USER_2_EMAIL');
+            $password = Hash::make(env('ADMIN_USER_2_PASSWORD'));
+            $admin2 = $users->create(compact('username', 'email', 'password'));
+            $admins[] = $admin2;
+        }
 
-            $root->roles()->sync($adminRoles);
+        if (env('ADMIN_USER_3_USERNAME')) {
+            $username = env('ADMIN_USER_3_USERNAME');
+            $email = env('ADMIN_USER_3_EMAIL');
+            $password = Hash::make(env('ADMIN_USER_3_PASSWORD'));
+            $admin3 = $users->create(compact('username', 'email', 'password'));
+            $admins[] = $admin3;
+        }
+
+        foreach ($admins as $admin) {
+            $admin->roles()->sync($adminRoles);
         }
     }
 }
