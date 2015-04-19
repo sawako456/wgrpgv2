@@ -28,6 +28,22 @@ abstract class AbstractRepository implements EloquentRepositoryContract
     }
 
     /**
+     * Count all entities.
+     *
+     * @param bool $trashed
+     *
+     * @return int
+     */
+    public function count($trashed = false)
+    {
+        if ($trashed) {
+            return $this->model->withTrashed()->count();
+        }
+
+        return $this->model->count();
+    }
+
+    /**
      * Make a new instance of the entity to query on.
      *
      * @param array $with

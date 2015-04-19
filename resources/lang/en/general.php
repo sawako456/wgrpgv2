@@ -11,5 +11,9 @@ return [
     'update'       => 'Update',
     'cancel'       => 'Cancel',
     'back'         => 'Back',
+    'users'        => 'Users',
+    'worlds'       => 'Worlds',
+    'templates'    => 'Templates',
+    'settings'     => 'Settings',
 
 ];

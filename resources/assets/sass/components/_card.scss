@@ -7,9 +7,34 @@
   margin-bottom: 20px;
   background-color: $secondaryBackgroundColor;
 
+  a {
+    color: $paragraphColor;
+    text-decoration: none;
+
+    &:hover {
+      color: $paragraphColor;
+      text-decoration: none;
+    }
+  }
+
   .card-header {
+    &.card-logo {
+      padding-bottom: 9px;
+      margin-bottom: 9px;
+    }
+
     margin-top: 0;
     border-bottom: 1px solid $primaryColor;
     color: $primaryColor;
+  }
+
+  .card-logo {
+    &.jumbo {
+      p,
+      i,
+      span {
+        font-size: 10em;
+      }
+    }
   }
 }

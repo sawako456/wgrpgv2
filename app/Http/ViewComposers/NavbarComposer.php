@@ -19,8 +19,8 @@ class NavbarComposer
     /**
      * Create a new instance of the composer.
      *
-     * @param \Illuminate\Contracts\Auth\Guard
-     * @param \Illuminate\Routing\UrlGenerator
+     * @param \Illuminate\Contracts\Auth\Guard $auth
+     * @param \Illuminate\Routing\UrlGenerator $url
      *
      * @return void
      */

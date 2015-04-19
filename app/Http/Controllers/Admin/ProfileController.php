@@ -64,7 +64,7 @@ class ProfileController extends Controller
 
         if (empty($email) && empty($password)) {
             return redirect()->route('admin.profile.edit')
-                ->with('notifications', new MessageBag(['Nothing was updated.']));
+                ->with('infos', new MessageBag(['Nothing was updated.']));
         }
 
         if (!empty($email)) {

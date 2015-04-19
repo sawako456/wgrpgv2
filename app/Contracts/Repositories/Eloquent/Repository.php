@@ -13,6 +13,15 @@ interface Repository
     public function all(array $with = array(), $trashed = false);
 
     /**
+     * Count all entities.
+     *
+     * @param bool $trashed
+     *
+     * @return int
+     */
+    public function count($trashed = false);
+
+    /**
      * Make a new instance of the entity to query on.
      *
      * @param array $with
