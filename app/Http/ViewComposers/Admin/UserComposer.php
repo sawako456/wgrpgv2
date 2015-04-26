@@ -1,15 +1,15 @@
 <?php namespace Cryptic\Wgrpg\Http\ViewComposers\Admin;
 
 use Cryptic\Wgrpg\Contracts\Repositories\World\Repository as WorldRepositoryContract;
-use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\Request;
 
 class UserComposer
 {
     /**
-     * @var \Illuminate\Contracts\Auth\Guard
+     * @var \Illuminate\Http\Request
      */
-    protected $auth;
+    protected $request;
 
     /**
      * @var \Cryptic\Wgrpg\Contracts\Repositories\World\Repository
@@ -19,14 +19,14 @@ class UserComposer
     /**
      * Create a new instance of the composer.
      *
-     * @param \Illuminate\Contracts\Auth\Guard                       $auth
+     * @param \Illuminate\Http\Request                       $auth
      * @param \Cryptic\Wgrpg\Contracts\Repositories\World\Repository $worlds
      *
      * @return void
      */
-    public function __construct(Guard $auth, WorldRepositoryContract $worlds)
+    public function __construct(Request $request, WorldRepositoryContract $worlds)
     {
-        $this->auth = $auth;
+        $this->request = $request;
         $this->worlds = $worlds;
     }
 
@@ -39,7 +39,8 @@ class UserComposer
      */
     public function compose(View $view)
     {
-        $worldCount = $this->worlds->getWhere('user_id', $this->auth->id())->count();
+        $userId = $this->request->route('id');
+        $worldCount = $this->worlds->getWhere('user_id', $userId)->count();
 
         $view->with(compact('worldCount'));
     }
