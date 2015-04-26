@@ -18,9 +18,18 @@ class UserSeeder extends Seeder
         $users = App::make('Cryptic\Wgrpg\Contracts\Repositories\User\Repository');
 
         $roleData = [
-            ['name' => 'Login'],
-            ['name' => 'Player'],
-            ['name' => 'Admin'],
+            [
+                'name' => 'Login',
+                'label' => 'default',
+            ],
+            [
+                'name' => 'Player',
+                'label' => 'success',
+            ],
+            [
+                'name' => 'Admin',
+                'label' => 'primary',
+            ],
         ];
 
         foreach ($roleData as $role) {

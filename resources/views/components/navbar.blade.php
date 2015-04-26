@@ -19,10 +19,9 @@
           </a>
         </li>
         <li @if(Route::is('profile.edit', 'admin.profile.edit')) class="active" @endif>
-          <a class="navbar-avatar" href="{{ $profileRoute }}" title="@lang('general.profile')">
+          <a href="{{ $profileRoute }}" title="@lang('general.profile')">
             <span class="sr-only">@lang('general.profile')</span>
-            <i class="fa fa-user visible-xs"></i>
-            <img class="hidden-xs avatar gravatar" src="{{ Auth::user()->gravatar }}" alt="avatar">
+            <i class="fa fa-user"></i>
           </a>
         </li>
         <li>

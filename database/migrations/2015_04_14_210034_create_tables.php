@@ -47,6 +47,7 @@ class CreateTables extends Migration
         Schema::create('roles', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('name')->unique();
+            $table->string('label');
 
             $table->timestamps();
             $table->softDeletes();

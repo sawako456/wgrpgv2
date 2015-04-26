@@ -139,6 +139,7 @@ return [
         /*
          * Application service providers.
          */
+
         'Cryptic\Wgrpg\Providers\AuthServiceProvider',
         'Cryptic\Wgrpg\Providers\AppServiceProvider',
         'Cryptic\Wgrpg\Providers\BusServiceProvider',
@@ -160,6 +161,11 @@ return [
         'Cryptic\Wgrpg\Providers\User\RepositoryServiceProvider',
         'Cryptic\Wgrpg\Providers\World\RepositoryServiceProvider',
 
+        /*
+         * Application services service providers.
+         */
+
+        'Cryptic\Wgrpg\Providers\User\ServiceProvider',
     ],
 
     /*

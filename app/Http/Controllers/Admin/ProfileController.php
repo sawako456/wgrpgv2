@@ -54,7 +54,10 @@ class ProfileController extends Controller
     /**
      * Update the user profile.
      *
-     * @return void
+     * @param \Cryptic\Wgrpg\Http\Requests\Admin\Profile\UpdateRequest $request
+     * @param \Illuminate\Contracts\Hashing\Hasher                     $hash
+     *
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(UpdateRequest $request, Hasher $hash)
     {

@@ -7,6 +7,10 @@
   border-color: $backgroundHighlightColor;
 }
 
+label {
+  color: $primaryColor;
+}
+
 .muted {
   color: $paragraphMutedColor;
 }

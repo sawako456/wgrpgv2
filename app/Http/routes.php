@@ -50,4 +50,46 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
             'uses' => 'ProfileController@update',
         ]);
     });
+
+    Route::group(['prefix' => 'users'], function () {
+        Route::get('/', [
+            'as' => 'admin.users',
+            'uses' => 'UserController@index',
+        ]);
+
+        Route::get('create', [
+            'as' => 'admin.users.create',
+            'uses' => 'UserController@create',
+        ]);
+
+        Route::post('/', [
+            'as' => 'admin.users.store',
+            'uses' => 'UserController@store',
+        ]);
+
+        Route::get('{id}', [
+            'as' => 'admin.users.show',
+            'uses' => 'UserController@show',
+        ]);
+
+        Route::get('{id}/edit', [
+            'as' => 'admin.users.edit',
+            'uses' => 'UserController@edit',
+        ]);
+
+        Route::put('{id}', [
+            'as' => 'admin.users.update',
+            'uses' => 'UserController@update',
+        ]);
+
+        Route::put('{id}/restore', [
+            'as' => 'admin.users.restore',
+            'uses' => 'UserController@restore',
+        ]);
+
+        Route::delete('{id}', [
+            'as' => 'admin.users.destroy',
+            'uses' => 'UserController@destroy',
+        ]);
+    });
 });

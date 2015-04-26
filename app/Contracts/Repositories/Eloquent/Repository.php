@@ -1,5 +1,7 @@
 <?php namespace Cryptic\Wgrpg\Contracts\Repositories\Eloquent;
 
+use Closure;
+
 interface Repository
 {
     /**
@@ -10,7 +12,7 @@ interface Repository
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function all(array $with = array(), $trashed = false);
+    public function all(array $with, $trashed);
 
     /**
      * Count all entities.
@@ -19,14 +21,14 @@ interface Repository
      *
      * @return int
      */
-    public function count($trashed = false);
+    public function count($trashed);
 
     /**
      * Make a new instance of the entity to query on.
      *
      * @param array $with
      */
-    public function make(array $with = array());
+    public function make(array $with);
 
     /**
      * Find an entity by id.
@@ -37,7 +39,7 @@ interface Repository
      *
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function find($id, array $with = array(), $trashed = false);
+    public function find($id, array $with, $trashed);
 
     /**
      * Find an entity by id.
@@ -48,7 +50,7 @@ interface Repository
      *
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function findOrFail($id, array $with = array(), $trashed = false);
+    public function findOrFail($id, array $with, $trashed);
 
     /**
      * Find a single entity with id and where column is value or fail.
@@ -62,8 +64,8 @@ interface Repository
      *
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function findWhereOrFail($id, $column, $operator = '=', $value = null,
-        array $with = array(), $trashed = false);
+    public function findWhereOrFail($id, $column, $operator, $value,
+        array $with, $trashed);
 
     /**
      * Find an entity by id or create it.
@@ -83,7 +85,7 @@ interface Repository
      *
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function first(array $with = array(), $trashed = false);
+    public function first(array $with, $trashed);
 
     /**
      * Find a single entity where column is value.
@@ -96,8 +98,7 @@ interface Repository
      *
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function firstWhere($column, $operator = '=', $value = null,
-        array $with = array(), $trashed = false);
+    public function firstWhere($column, $operator, $value, array $with, $trashed);
 
     /**
      * Find a single entity where column is value or fail.
@@ -110,8 +111,8 @@ interface Repository
      *
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function firstWhereOrFail($column, $operator = '=', $value = null,
-        array $with = array(), $trashed = false);
+    public function firstWhereOrFail($column, $operator, $value, array $with,
+        $trashed);
 
     /**
      * Find many entities where column is value.
@@ -124,8 +125,7 @@ interface Repository
      *
      * @return \Illuminate\Support\Collection
      */
-    public function getWhere($column, $operator = '=', $value = null,
-        array $with = array(), $trashed = false);
+    public function getWhere($column, $operator, $value, array $with, $trashed);
 
     /**
      * Find many entities where column is in value array.
@@ -137,8 +137,28 @@ interface Repository
      *
      * @return \Illuminate\Support\Collection
      */
-    public function getWhereIn($column, array $values = array(),
-        array $with = array(), $trashed = false);
+    public function getWhereIn($column, array $values, array $with, $trashed);
+
+    /**
+     * Get Results by Page.
+     *
+     * All closures are optional. Possible to extend repository with methods
+     * following this syntax: get[Searcher|Sorter|Filter], e.g. getFilter.
+     * The method will be executed if the corresponding argument is not an
+     * instance of \Closure.
+     *
+     * @param int      $page
+     * @param int      $limit
+     * @param array    $with
+     * @param \Closure $searcher
+     * @param \Closure $sorter
+     * @param \Closure $filter
+     * @param bool     $trashed
+     *
+     * @return \stdClass
+     */
+    public function getByPage($page, $limit, array $with, Closure $searcher,
+        Closure $sorter, Closure $filter, $trashed);
 
     /**
      * Return all entities that have a required relationship.
@@ -149,7 +169,7 @@ interface Repository
      *
      * @return \Illuminate\Support\Collection
      */
-    public function has($relation, array $with = array(), $trashed = false);
+    public function has($relation, array $with, $trashed);
 
     /**
      * Create a new entity.
@@ -177,4 +197,13 @@ interface Repository
      * @return null|bool
      */
     public function delete($model);
+
+    /**
+     * Restore a entity.
+     *
+     * @param mixed $model
+     *
+     * @return null|bool
+     */
+    public function restore($model);
 }

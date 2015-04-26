@@ -61,7 +61,7 @@
             <div class="card-actions pull-right">
               <a class="btn btn-lg btn-danger" href="{{ route('admin.dashboard') }}">
                 <i class="fa fa-times"></i> @lang('general.cancel')</a>
-              <button class="btn btn-lg btn-success" type="submit">
+              <button class="btn btn-lg btn-success" type="submit" data-updating-text="@lang('general.updating')...">
                 <i class="fa fa-check"></i> @lang('general.update')
               </button>
             </div>

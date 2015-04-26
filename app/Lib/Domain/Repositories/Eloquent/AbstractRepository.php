@@ -2,6 +2,7 @@
 
 use Closure;
 use Cryptic\Wgrpg\Contracts\Repositories\Eloquent\Repository as EloquentRepositoryContract;
+use stdClass;
 
 /**
  * @see http://culttt.com/2014/03/17/eloquent-tricks-better-repositories/
@@ -16,7 +17,7 @@ abstract class AbstractRepository implements EloquentRepositoryContract
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function all(array $with = array(), $trashed = false)
+    public function all(array $with = [], $trashed = false)
     {
         $query = $this->make($with);
 
@@ -48,7 +49,7 @@ abstract class AbstractRepository implements EloquentRepositoryContract
      *
      * @param array $with
      */
-    public function make(array $with = array())
+    public function make(array $with = [])
     {
         return $this->model->with($with);
     }
@@ -62,7 +63,7 @@ abstract class AbstractRepository implements EloquentRepositoryContract
      *
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function find($id, array $with = array(), $trashed = false)
+    public function find($id, array $with = [], $trashed = false)
     {
         $query = $this->make($with);
 
@@ -82,7 +83,7 @@ abstract class AbstractRepository implements EloquentRepositoryContract
      *
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function findOrFail($id, array $with = array(), $trashed = false)
+    public function findOrFail($id, array $with = [], $trashed = false)
     {
         $query = $this->make($with);
 
@@ -106,7 +107,7 @@ abstract class AbstractRepository implements EloquentRepositoryContract
      * @return \Illuminate\Database\Eloquent\Model
      */
     public function findWhereOrFail($id, $column, $operator = '=', $value = null,
-        array $with = array(), $trashed = false)
+        array $with = [], $trashed = false)
     {
         $query = $this->make($with);
 
@@ -142,7 +143,7 @@ abstract class AbstractRepository implements EloquentRepositoryContract
      *
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function first(array $with = array(), $trashed = false)
+    public function first(array $with = [], $trashed = false)
     {
         $query = $this->make($with);
 
@@ -165,7 +166,7 @@ abstract class AbstractRepository implements EloquentRepositoryContract
      * @return \Illuminate\Database\Eloquent\Model
      */
     public function firstWhere($column, $operator = '=', $value = null,
-        array $with = array(), $trashed = false)
+        array $with = [], $trashed = false)
     {
         $query = $this->make($with);
 
@@ -192,7 +193,7 @@ abstract class AbstractRepository implements EloquentRepositoryContract
      * @return \Illuminate\Database\Eloquent\Model
      */
     public function firstWhereOrFail($column, $operator = '=', $value = null,
-        array $with = array(), $trashed = false)
+        array $with = [], $trashed = false)
     {
         $query = $this->make($with);
 
@@ -219,7 +220,7 @@ abstract class AbstractRepository implements EloquentRepositoryContract
      * @return \Illuminate\Support\Collection
      */
     public function getWhere($column, $operator = '=', $value = null,
-        array $with = array(), $trashed = false)
+        array $with = [], $trashed = false)
     {
         $query = $this->make($with);
 
@@ -240,8 +241,8 @@ abstract class AbstractRepository implements EloquentRepositoryContract
      *
      * @return \Illuminate\Support\Collection
      */
-    public function getWhereIn($column, array $values = array(),
-        array $with = array(), $trashed = false)
+    public function getWhereIn($column, array $values = [], array $with = [],
+        $trashed = false)
     {
         $query = $this->make($with);
 
@@ -253,6 +254,71 @@ abstract class AbstractRepository implements EloquentRepositoryContract
     }
 
     /**
+     * Get Results by Page.
+     *
+     * All closures are optional. Possible to extend repository with methods
+     * following this syntax: get[Searcher|Sorter|Filter], e.g. getFilter.
+     * The method will be executed if the corresponding argument is not an
+     * instance of \Closure.
+     *
+     * @param int      $page
+     * @param int      $limit
+     * @param array    $with
+     * @param \Closure $searcher
+     * @param \Closure $sorter
+     * @param \Closure $filter
+     * @param bool     $trashed
+     *
+     * @return \stdClass
+     */
+    public function getByPage($page, $limit = 10, array $with = [],
+        Closure $searcher = null, Closure $sorter = null, Closure $filter = null,
+        $trashed = false)
+    {
+        $result = new stdClass();
+        $result->page = $page;
+        $result->limit = $limit;
+        $result->totalItems = 0;
+        $result->items = [];
+        $query = $this->make($with);
+
+        if ($trashed) {
+            $query->withTrashed();
+        }
+
+        if ($searcher instanceof Closure) {
+            $searcher($query);
+        } elseif (method_exists($this, 'getSearcher')) {
+            $searcher = $this->getSearcher();
+            $searcher($query);
+        }
+
+        if ($sorter instanceof Closure) {
+            $sorter($query);
+        } elseif (method_exists($this, 'getSorter')) {
+            $sorter = $this->getSorter();
+            $sorter($query);
+        }
+
+        if ($filter instanceof Closure) {
+            $filter($query);
+        } elseif (method_exists($this, 'getFilter')) {
+            $filter = $this->getFilter();
+            $filter($query);
+        }
+
+        $result->totalItems = $query->count();
+
+        $model = $query->skip($limit * ($page - 1))
+            ->take($limit)
+            ->get();
+
+        $result->items = $model->all();
+
+        return $result;
+    }
+
+    /**
      * Return all entities that have a required relationship.
      *
      * @param string $relation
@@ -261,7 +327,7 @@ abstract class AbstractRepository implements EloquentRepositoryContract
      *
      * @return \Illuminate\Support\Collection
      */
-    public function has($relation, array $with = array(), $trashed = false)
+    public function has($relation, array $with = [], $trashed = false)
     {
         $query = $this->make($with);
 
@@ -306,5 +372,17 @@ abstract class AbstractRepository implements EloquentRepositoryContract
     public function delete($model)
     {
         return $model->delete();
+    }
+
+    /**
+     * Restore a entity.
+     *
+     * @param mixed $model
+     *
+     * @return null|bool
+     */
+    public function restore($model)
+    {
+        return $model->restore();
     }
 }

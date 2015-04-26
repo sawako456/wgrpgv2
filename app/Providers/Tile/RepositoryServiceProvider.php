@@ -1,8 +1,8 @@
 <?php namespace Cryptic\Wgrpg\Providers\Tile;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class RepositoryServiceProvider extends ServiceProvider
+class RepositoryServiceProvider extends BaseServiceProvider
 {
 
     /**

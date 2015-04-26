@@ -10,22 +10,14 @@
 // Vendors
 // ====================================
 
-@import "bootstrap-sprockets";
-
-// Set variables that modify bootstrap look n feel here
-// List of available variables can be found here:
-//   http://getbootstrap.com/customize/#less-variables
-// Just remove the @ and replace it with $
-$body-bg: $backgroundColor;
-$border-radius-base: 0;
-$border-radius-large: 0;
-$border-radius-small: 0;
-$brand-primary: $primaryColor;
-$text-color: $paragraphColor;
-$link-color: $primaryColor;
-
+$icon-font-path: "../fonts/";
+@import "settings/shoestring";
 @import "bootstrap";
 @import "font-awesome";
+@import "vendor/datetimepicker-build";
+@import "vendor/datetimepicker";
+
+/*#{$icon-font-path}#{$icon-font-name}*/
 
 // ====================================
 // Foundation
@@ -40,5 +32,7 @@ $link-color: $primaryColor;
 
 @import "components/navbar";
 @import "components/sidebar";
+@import "components/paginator";
+@import "components/modal";
 @import "components/form";
 @import "components/card";

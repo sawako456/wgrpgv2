@@ -8,11 +8,9 @@
   background-color: $secondaryBackgroundColor;
 
   a {
-    color: $paragraphColor;
     text-decoration: none;
 
     &:hover {
-      color: $paragraphColor;
       text-decoration: none;
     }
   }
@@ -34,6 +32,16 @@
       i,
       span {
         font-size: 10em;
+      }
+    }
+  }
+
+  .card-content {
+    p {
+      color: $paragraphColor;
+
+      &:hover {
+        color: $paragraphColor;
       }
     }
   }

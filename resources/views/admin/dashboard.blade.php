@@ -14,7 +14,7 @@
     <div class="row">
       <div class="col-sm-6 col-lg-3">
         <div class="card">
-          <a href="#users">
+          <a href="{{ route('admin.users') }}">
             <div class="card-logo jumbo card-header text-center">
               <i class="fa fa-users"></i>
             </div>

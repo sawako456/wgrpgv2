@@ -1,0 +1,64 @@
+// ====================================
+// Datetimepicker styling
+// ====================================
+//
+// TODO: Finish styling this shit...
+//
+
+.bootstrap-datetimepicker-widget {
+  background-color: $backgroundColor;
+  border-radius: 0;
+  border-color: $backgroundHighlightColor;
+  color: $primaryColor;
+
+  span {
+    border-radius: 0 !important;
+  }
+
+  table {
+    thead {
+      tr {
+        th {
+          border-radius: 0;
+
+          &:hover {
+            background-color: $backgroundColor;
+          }
+        }
+
+        &:first-child {
+          th {
+            border-radius: 0;
+
+            &:hover {
+              background-color: $backgroundHighlightColor;
+            }
+          }
+        }
+      }
+    }
+
+    td {
+      border-radius: 0;
+
+      &.day,
+      &.hour,
+      &.minute,
+      &.seconds {
+        &:hover {
+          background-color: $backgroundHighlightColor;
+        }
+      }
+
+      &.active {
+        background-color: $backgroundHighlightColor;
+        color: $primaryColor;
+
+        &:hover {
+          background-color: $backgroundHighlightColor;
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}

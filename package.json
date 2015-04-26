@@ -3,10 +3,17 @@
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-bower": "0.0.10",
+    "gulp-rename": "^1.2.2",
     "laravel-elixir": "*"
   },
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install"
+  },
+  "dependencies": {
+    "gulp": "^3.8.8",
+    "gulp-bower": "0.0.10",
+    "gulp-rename": "^1.2.2",
+    "laravel-elixir": "*"
   }
 }

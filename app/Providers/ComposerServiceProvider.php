@@ -16,6 +16,9 @@ class ComposerServiceProvider extends ServiceProvider
 
         $this->app['view']->composer('admin.dashboard',
             'Cryptic\Wgrpg\Http\ViewComposers\Admin\DashboardComposer');
+
+        $this->app['view']->composer('admin.users.show',
+            'Cryptic\Wgrpg\Http\ViewComposers\Admin\UserComposer');
     }
 
     /**

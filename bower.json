@@ -12,6 +12,8 @@
     "angular-mocks": "~1.2.x",
     "bootstrap-sass-official": "~3.3.4",
     "fontawesome": "~4.3.0",
-    "jquery": "~1.11.2"
+    "jquery": "~1.11.2",
+    "moment": "~2.10.2",
+    "eonasdan-bootstrap-datetimepicker": "~4.7.14"
   }
 }

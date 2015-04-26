@@ -70,6 +70,11 @@ class AuthController extends Controller
         return redirect()->route('auth.login');
     }
 
+    /**
+     * Resolve which route to return based on the users roles.
+     *
+     * @return string
+     */
     protected function resolveRedirectRoute()
     {
         if ($this->auth->hasRole('Admin')) {

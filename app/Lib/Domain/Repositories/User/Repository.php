@@ -4,7 +4,6 @@ use Cryptic\Wgrpg\Contracts\Entities\Role as RoleEntityContract;
 use Cryptic\Wgrpg\Contracts\Entities\User as UserEntityContract;
 use Cryptic\Wgrpg\Contracts\Repositories\User\Repository as UserRepositoryContract;
 use Cryptic\Wgrpg\Lib\Domain\Repositories\Eloquent\AbstractRepository;
-use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 
 class Repository extends AbstractRepository implements UserRepositoryContract
 {
@@ -39,7 +38,7 @@ class Repository extends AbstractRepository implements UserRepositoryContract
         }
 
         return $this->model->where('users.id', $user->id)
-            ->whereHas('roles', function (QueryBuilder $query) use ($role) {
+            ->whereHas('roles', function ($query) use ($role) {
                 $name = $role;
 
                 if ($role instanceof RoleEntityContract) {
@@ -60,7 +59,7 @@ class Repository extends AbstractRepository implements UserRepositoryContract
     public function hasRoles(array $roles, UserEntityContract $user)
     {
         return $this->model->where('users.id', $user->id)
-            ->whereHas('roles', function (QueryBuilder $query) use ($roles) {
+            ->whereHas('roles', function ($query) use ($roles) {
                 $query->whereIn('roles.name', $roles);
             })->count() !== 0;
     }

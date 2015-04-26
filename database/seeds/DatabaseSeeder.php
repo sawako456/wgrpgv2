@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call('UserSeeder');
+        $this->call('PlayerSeeder');
         $this->call('WorldSeeder');
         $this->call('MapSeeder');
         // $this->call('EventSeeder');

@@ -1,0 +1,61 @@
+// ====================================
+// Paginator styling
+// ====================================
+
+.pagination {
+  margin: 0;
+
+  > li {
+    > a {
+      background-color: $backgroundColor;
+      border-color: $backgroundHighlightColor;
+
+      &:focus,
+      &:hover {
+        color: $primaryColor;
+        background-color: $backgroundHighlightColor;
+        border-color: $backgroundHighlightColor;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &:last-child,
+    &:first-child {
+      > span {
+        background-color: $backgroundColor;
+        border-color: $backgroundHighlightColor;
+      }
+    }
+  }
+
+  .active {
+    > span {
+      color: #fff;
+      background-color: $primaryColor;
+      border-color: $backgroundHighlightColor;
+
+      &:hover {
+        color: #fff;
+        background-color: $primaryColor;
+        border-color: $backgroundHighlightColor;
+      }
+    }
+  }
+
+  .disabled {
+    > span {
+      color: $primaryColor;
+      background-color: $primaryColor;
+      border-color: $backgroundHighlightColor;
+
+      &:hover {
+        color: $primaryColor;
+        background-color: $backgroundColor;
+        border-color: $backgroundHighlightColor;
+      }
+    }
+  }
+}

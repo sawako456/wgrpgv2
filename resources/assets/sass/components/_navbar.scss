@@ -29,10 +29,6 @@ $dropDown: true;
         &.navbar-avatar {
           padding: 15px;
 
-          @media(min-width: 768px) {
-            padding: 5px;
-          }
-
           .avatar {
             display: none;
             width: 40px;

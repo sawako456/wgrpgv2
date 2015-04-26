@@ -6,6 +6,7 @@
 
 var gulp = require('gulp'),
     bower = require('gulp-bower'),
+    rename = require('gulp-rename'),
     elixir = require('laravel-elixir');
 
 /*
@@ -17,7 +18,7 @@ var gulp = require('gulp'),
 var config = {
     bower: {
         path: './bower_components',
-        fontawesome: {
+        fonts: {
             files: [
                 './bower_components/fontawesome/fonts/**.*',
                 './bower_components/bootstrap-sass-official/assets/fonts/bootstrap/**.*'
@@ -28,7 +29,7 @@ var config = {
     sass: {
         output: 'style.scss',
         loadPath: [
-            './resources/sass',
+            './resources/assets/sass',
             './bower_components/bootstrap-sass-official/assets/stylesheets',
             './bower_components/fontawesome/scss'
         ]
@@ -39,9 +40,9 @@ var config = {
             files: [
                 '../../bower_components/jquery/dist/jquery.min.js',
                 '../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap-sprockets.js',
-                '../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js'
-                // '../../bower_components/angular/angular.js',
-                // '../../bower_components/angular-route/angular-route.js'
+                '../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
+                '../../bower_components/moment/min/moment.min.js',
+                '../../bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js'
             ],
             output: './public/js/lib.js'
         },
@@ -51,6 +52,10 @@ var config = {
             ],
             output: './public/js/app.js'
         }
+    },
+    dtp: {
+        file: './bower_components/eonasdan-bootstrap-datetimepicker/build/css/*.min.css',
+        output: './resources/assets/sass/vendor/'
     }
 };
 
@@ -81,9 +86,22 @@ elixir.extend('icons', function(src, output) {
 
 });
 
+elixir.extend('dtp', function(src, output) {
+
+    gulp.task('dtp', function() {
+        gulp.src(src)
+            .pipe(rename('_datetimepicker-build.scss')) // test for now
+            .pipe(gulp.dest(output));
+    });
+
+    return this.queueTask('dtp');
+
+});
+
 elixir(function(mix) {
     mix.bower(config.bower.path)
-        .icons(config.bower.fontawesome.files, config.bower.fontawesome.output)
+        .icons(config.bower.fonts.files, config.bower.fonts.output)
+        .dtp(config.dtp.file, config.dtp.output)
         .sass(config.sass.output, null, {includePaths: config.sass.loadPath})
         .scripts(config.js.lib.files, config.js.lib.output)
         .scripts(config.js.app.files, config.js.app.output);

@@ -20,7 +20,7 @@ class Role extends Model implements RoleEntityContract
      *
      * @var array
      */
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'label'];
 
     /**
      * Additional dates to mutate into instances of \Carbon\Carbon.

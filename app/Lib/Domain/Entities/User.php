@@ -41,19 +41,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     protected $dates = ['deleted_at'];
 
     /**
-     * Get a gravatar url based on user email.
-     * Uses the mystery man default if no avatar is found.
-     *
-     * @return string
-     */
-    public function getGravatarAttribute()
-    {
-        $hash = md5(strtolower(trim($this->attributes['email'])));
-
-        return 'http://www.gravatar.com/avatar/' . $hash . '?d=mm';
-    }
-
-    /**
      * Roles relationship.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
