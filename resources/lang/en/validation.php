@@ -112,7 +112,7 @@ return [
 
 	'attributes' => [
 
-		'password' => 'new password',
+		'password' => 'password',
 
 	],
 

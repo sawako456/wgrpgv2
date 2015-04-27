@@ -31,6 +31,16 @@ Route::group(['prefix' => 'auth'], function () {
         'as' => 'auth.logout',
         'uses' => 'AuthController@getLogout',
     ]);
+
+    Route::get('register', [
+        'as' => 'auth.register',
+        'uses' => 'AuthController@getRegistration',
+    ]);
+
+    Route::post('register', [
+        'as' => 'auth.register.do',
+        'uses' => 'AuthController@postRegistration',
+    ]);
 });
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {

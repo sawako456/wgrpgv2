@@ -59,7 +59,7 @@
             </div>
             <div class="form-group">
               <label class="control-label" for="last_login_at">@lang('general.date.last_login_at')</label>
-              <p id="last_login_at" class="form-control-static">{{ $user->logins !== 0 ? $user->last_login_at : trans('general.never') }}</p>
+              <p id="last_login_at" class="form-control-static">{{ $user->logins ? $user->last_login_at : trans('general.never') }}</p>
             </div>
             <div class="form-group">
               <label class="control-label" for="deleted_at">@lang('general.date.deleted_at')</label>

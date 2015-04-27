@@ -1,6 +1,8 @@
 <?php namespace Cryptic\Wgrpg\Http\Controllers;
 
+use Cryptic\Wgrpg\Contracts\Services\User\Service as UserServiceContract;
 use Cryptic\Wgrpg\Http\Requests\Auth\LoginRequest;
+use Cryptic\Wgrpg\Http\Requests\Auth\RegisterRequest;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\View\Factory as View;
 
@@ -52,9 +54,8 @@ class AuthController extends Controller
             return redirect()->intended($this->resolveRedirectRoute());
         }
 
-        // TODO: Flash error messages?
-
         return redirect()->route('auth.login')
+            ->withErrors($this->auth->errors())
             ->withInput($request->only('username', 'remember'));
     }
 
@@ -68,6 +69,38 @@ class AuthController extends Controller
         $this->auth->logout();
 
         return redirect()->route('auth.login');
+    }
+
+    /**
+     * Get the registration page.
+     *
+     * @param \Illuminate\Contracts\View\Factory $view
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function getRegistration(View $view)
+    {
+        return $view->make('auth.register');
+    }
+
+    /**
+     * Attempt to register a user. Logs in the user if successful.
+     *
+     * @param \Cryptic\Wgrpg\Http\Requests\Auth\RegisterRequest $request
+     * @param \Cryptic\Wgrpg\Contracts\Services\User\Service    $userService
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function postRegistration(RegisterRequest $request,
+        UserServiceContract $userService)
+    {
+        $input = $request->only(['username', 'email', 'password']);
+
+        $user = $userService->createPlayer($input);
+
+        $this->auth->login($user);
+
+        return redirect()->route('dashboard'); // TODO: Add welcome message?
     }
 
     /**

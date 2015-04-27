@@ -19,7 +19,7 @@ class UserComposer
     /**
      * Create a new instance of the composer.
      *
-     * @param \Illuminate\Http\Request                       $auth
+     * @param \Illuminate\Http\Request                               $auth
      * @param \Cryptic\Wgrpg\Contracts\Repositories\World\Repository $worlds
      *
      * @return void

@@ -14,5 +14,15 @@ return [
 		],
 
 	],
+	'error' => [
+
+		'auth' => [
+
+			'credentials' => 'Username or Password was incorrect.',
+			'role'        => 'You are not authorized to sign in.',
+
+		],
+
+	],
 
 ];

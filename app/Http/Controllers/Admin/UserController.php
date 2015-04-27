@@ -6,7 +6,6 @@ use Cryptic\Wgrpg\Http\Requests\Admin\User\StoreRequest;
 use Cryptic\Wgrpg\Http\Requests\Admin\User\UpdateRequest as UserUpdateRequest;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Config\Repository as Config;
-use Illuminate\Contracts\Hashing\Hasher;
 use Illuminate\Contracts\View\Factory as View;
 use Illuminate\Http\Request as Input;
 use Illuminate\Pagination\LengthAwarePaginator as Paginator;
@@ -87,30 +86,21 @@ class UserController extends Controller
      * Store a newly created user in storage.
      *
      * @param \Cryptic\Wgrpg\Http\Requests\Admin\User\StoreRequest $request
-     * @param \Illuminate\Contracts\Hashing\Hasher                 $hash
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(StoreRequest $request, Hasher $hash)
+    public function store(StoreRequest $request)
     {
         $input = $request->only(['username', 'email', 'password', 'roles']);
-        $input['password'] = $hash->make(array_get($input, 'password'));
         $roles = array_get($input, 'roles', []);
 
-        if (empty(array_get($input, 'email'))) {
-            $input['email'] = null;
-        }
-
-        $user = $this->userService->create($input);
-
-        if ($user && !empty($roles)) {
-            $roles = $this->userService->syncRoles($user, $roles);
-        }
+        $user = $this->userService->createUser($input, $roles);
 
         return redirect()->route('admin.users.show', [$user->id])
             ->with('messages', new MessageBag([
                 $this->lang->get('messages.message.user.created', [
-                    'name' => $user->username, ]),
+                    'name' => $user->username,
+                ]),
             ]));
     }
 
@@ -170,7 +160,8 @@ class UserController extends Controller
         return redirect()->route('admin.users.show', [$user->id])
             ->with('messages', new MessageBag([
                 $this->lang->get('messages.message.user.updated', [
-                    'name' => $user->username, ]),
+                    'name' => $user->username,
+                ]),
             ]));
     }
 
@@ -189,7 +180,9 @@ class UserController extends Controller
 
         return redirect()->route('admin.users')
             ->with('messages', new MessageBag([
-                $this->lang->get('messages.message.user.restored', ['name' => $user->username]),
+                $this->lang->get('messages.message.user.restored', [
+                    'name' => $user->username,
+                ]),
             ]));
     }
 
@@ -208,7 +201,9 @@ class UserController extends Controller
 
         return redirect()->route('admin.users')
             ->with('messages', new MessageBag([
-                $this->lang->get('messages.message.user.deleted', ['name' => $user->username]),
+                $this->lang->get('messages.message.user.deleted', [
+                    'name' => $user->username,
+                ]),
             ]));
     }
 }

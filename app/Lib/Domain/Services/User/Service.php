@@ -4,6 +4,7 @@ use Cryptic\Wgrpg\Contracts\Entities\User as UserEntityContract;
 use Cryptic\Wgrpg\Contracts\Repositories\Role\Repository as RoleRepositoryContract;
 use Cryptic\Wgrpg\Contracts\Repositories\User\Repository as UserRepositoryContract;
 use Cryptic\Wgrpg\Contracts\Services\User\Service as UserServiceContract;
+use Hash;
 
 class Service implements UserServiceContract
 {
@@ -63,6 +64,49 @@ class Service implements UserServiceContract
     public function syncRoles(UserEntityContract $user, array $roles)
     {
         return $user->roles()->sync($roles);
+    }
+
+    /**
+     * Create a new user, sync roles and hash the given password.
+     *
+     * @param array $input
+     * @param array $roles
+     * @param bool  $hash
+     *
+     * @return \Cryptic\Wgrpg\Contracts\Entities\User
+     */
+    public function createUser(array $input, array $roles = [], $hash = true)
+    {
+        if ($hash && array_get($input, 'password')) {
+            $input['password'] = Hash::make($input['password']);
+        }
+
+        if (empty(array_get($input, 'email'))) {
+            $input['email'] = null;
+        }
+
+        $user = $this->create($input);
+
+        if ($user && !empty($roles)) {
+            $this->syncRoles($user, $roles);
+        }
+
+        return $user;
+    }
+
+    /**
+     * Create a new user with the player and login roles.
+     *
+     * @param array $input
+     *
+     * @return \Cryptic\Wgrpg\Contracts\Entities\User
+     */
+    public function createPlayer(array $input)
+    {
+        $roles = $this->roles->getWhereIn('name', ['Login', 'Player'])
+            ->lists('id');
+
+        return $this->createUser($input, $roles);
     }
 
     /**

@@ -2,12 +2,25 @@
 // Form element styling
 // ====================================
 
-.form-signin {
+.form-group.required .control-label:after {
+   content: "*";
+   color: $brand-danger;
+}
+
+.form-signin,
+.form-register {
   padding: 15px;
   background-color: $secondaryBackgroundColor;
 
   .form-signin-heading,
+  .form-register-heading {
+    color: $primaryColor;
+  }
+
+  .form-signin-heading,
+  .form-register-heading,
   .checkbox {
+    margin-top: 0;
     margin-bottom: 10px;
   }
 
@@ -27,6 +40,11 @@
     &:focus {
       z-index: 2;
     }
+  }
+
+  .to-auth,
+  .to-register {
+    margin-top: 15px;
   }
 
   input[type="email"] {

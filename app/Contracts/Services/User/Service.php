@@ -22,4 +22,24 @@ interface Service
      * @return array
      */
     public function syncRoles(UserEntityContract $user, array $roles);
+
+    /**
+     * Create a new user, sync roles and hash the given password.
+     *
+     * @param array $input
+     * @param array $roles
+     * @param bool  $hash
+     *
+     * @return \Cryptic\Wgrpg\Contracts\Entities\User
+     */
+    public function createUser(array $input, array $roles, $hash);
+
+    /**
+     * Create a new user with the player and login roles.
+     *
+     * @param array $input
+     *
+     * @return \Cryptic\Wgrpg\Contracts\Entities\User
+     */
+    public function createPlayer(array $input);
 }

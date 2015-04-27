@@ -3,6 +3,8 @@
 use Cryptic\Wgrpg\Contracts\Repositories\User\Repository as UserRepositoryContract;
 use Illuminate\Auth\Guard as IlluminateGuard;
 use Illuminate\Contracts\Auth\UserProvider;
+use Illuminate\Support\MessageBag;
+use Lang;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
@@ -12,6 +14,11 @@ class Guard extends IlluminateGuard
      * @var \Cryptic\Wgrpg\Contracts\Repositories\User\Repository
      */
     protected $users;
+
+    /**
+     * @var \Illuminate\Support\MessageBag
+     */
+    protected $errors;
 
     /**
      * Create a new authentication guard.
@@ -31,6 +38,8 @@ class Guard extends IlluminateGuard
         $this->request = $request;
         $this->provider = $provider;
         $this->users = $users;
+
+        $this->errors = new MessageBag();
     }
 
     /**
@@ -51,13 +60,21 @@ class Guard extends IlluminateGuard
         // If an implementation of UserInterface was returned, we'll ask the provider
         // to validate the user against the given credentials, and if they are in
         // fact valid we'll log the users into the application and return true.
-        if ($this->hasValidCredentials($user, $credentials) && $this->hasLoginRole($user)) {
-            if ($login) {
-                $this->login($user, $remember);
+        if ($this->hasValidCredentials($user, $credentials)) {
+            if ($this->hasLoginRole($user)) {
+                if ($login) {
+                    $this->login($user, $remember);
+                }
+
+                return true;
             }
 
-            return true;
+            $this->errors->add('auth', Lang::get('messages.error.auth.role'));
+
+            return false;
         }
+
+        $this->errors->add('auth', Lang::get('messages.error.auth.credentials'));
 
         return false;
     }
@@ -97,5 +114,15 @@ class Guard extends IlluminateGuard
     public function hasRoles(array $roles)
     {
         return $this->check() && $this->users->hasRoles($roles, $this->user());
+    }
+
+    /**
+     * Get the errors message bag.
+     *
+     * @return \Illuminate\Support\MessageBag
+     */
+    public function errors()
+    {
+        return $this->errors;
     }
 }
