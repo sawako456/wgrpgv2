@@ -1,11 +1,11 @@
 <?php namespace Cryptic\Wgrpg\Support\Time;
 
+use Auth;
+use Carbon\Carbon;
+use Cryptic\Wgrpg\Contracts\Entities\User as UserEntityContract;
 use DateTime;
 use DateTimeZone;
 use Illuminate\Contracts\Config\Repository as Config;
-use Carbon\Carbon;
-use Auth;
-use Cryptic\Wgrpg\Contracts\Entities\User as UserEntityContract;
 
 class TimeZone
 {
