@@ -51,19 +51,19 @@
             <h3 class="card-header">@lang('general.timestamps')</h3>
             <div class="form-group">
               <label class="control-label" for="created_at">@lang('general.date.created_at')</label>
-              <p id="created_at" class="form-control-static">{{ $user->created_at }}</p>
+              <p id="created_at" class="form-control-static">{{ TimeZone::appToLocal($user->created_at) }}</p>
             </div>
             <div class="form-group">
               <label class="control-label" for="updated_at">@lang('general.date.updated_at')</label>
-              <p id="updated_at" class="form-control-static">{{ $user->updated_at }}</p>
+              <p id="updated_at" class="form-control-static">{{ TimeZone::appToLocal($user->updated_at) }}</p>
             </div>
             <div class="form-group">
               <label class="control-label" for="last_login_at">@lang('general.date.last_login_at')</label>
-              <p id="last_login_at" class="form-control-static">{{ $user->logins ? $user->last_login_at : trans('general.never') }}</p>
+              <p id="last_login_at" class="form-control-static">{{ $user->logins ? TimeZone::appToLocal($user->last_login_at) : trans('general.never') }}</p>
             </div>
             <div class="form-group">
               <label class="control-label" for="deleted_at">@lang('general.date.deleted_at')</label>
-              <p id="deleted_at" class="form-control-static">{{ $user->deleted_at or trans('general.na') }}</p>
+              <p id="deleted_at" class="form-control-static">{{ $user->deleted_at ? TimeZone::appToLocal($user->deleted_at) : trans('general.na') }}</p>
             </div>
           </div>
         </div>

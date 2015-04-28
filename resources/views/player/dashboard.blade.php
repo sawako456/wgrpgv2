@@ -8,52 +8,34 @@
   <div class="col-xs-12 main">
     <h1 class="page-header">@lang('general.dashboard')</h1>
     <div class="row">
-      <div class="col-sm-6 col-lg-3">
-        <div class="card">
-          <a href="#users">
-            <div class="card-logo jumbo card-header text-center">
-              <i class="fa fa-users"></i>
+      <div class="col-lg-4">
+        <div class="news card">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="news-post">
+                <h2 class="card-header news-header">News Header 1</h2>
+                <p class="news-body">New Body 1</p>
+              </div>
             </div>
-            <div class="card-content">
-              <h2>@lang('general.users') <small>0</small></h2>
+            <div class="col-xs-12">
+              <div class="news-post">
+                <h2 class="card-header news-header">News Header 2</h2>
+                <p class="news-body">New Body 2</p>
+              </div>
             </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="card">
-          <a href="#worlds">
-            <div class="card-logo jumbo card-header text-center">
-              <i class="fa fa-globe"></i>
+            <div class="col-xs-12">
+              <div class="news-post">
+                <h2 class="card-header news-header">News Header 3</h2>
+                <p class="news-body">New Body 3</p>
+              </div>
             </div>
-            <div class="card-content">
-              <h2>@lang('general.worlds') <small>0</small></h2>
+            <div class="col-xs-12">
+              <div class="news-post">
+                <h2 class="card-header news-header">News Header 4</h2>
+                <p class="news-body">New Body 4</p>
+              </div>
             </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="card">
-          <a href="#templates">
-            <div class="card-logo jumbo card-header text-center">
-              <i class="fa fa-cubes"></i>
-            </div>
-            <div class="card-content">
-              <h2>@lang('general.templates')</h2>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="card">
-          <a href="#settings">
-            <div class="card-logo jumbo card-header text-center">
-              <i class="fa fa-cogs"></i>
-            </div>
-            <div class="card-content">
-              <h2>@lang('general.settings')</h2>
-            </div>
-          </a>
+          </div>
         </div>
       </div>
     </div>

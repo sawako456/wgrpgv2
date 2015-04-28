@@ -17,42 +17,34 @@ class PlayerSeeder extends Seeder
 
         $playerRoles = $roles->getWhereIn('name', ['Login', 'Player'])->lists('id');
         $names = [
-            'Freddie Mercury',
-            'サイタマ',
-            'Abraham Lincoln',
-            'Max Payne',
-            'James Bond',
-            '川神 百代',
-            '直江 大和',
-            '椎名 京',
-            '黛 由紀江',
-            '川神 一子',
-            'クリスティアーネ・フリードリヒ',
-            'Bee Bop',
-            'Rock Steady',
-            'Master Splinter',
-            'Shredder',
-            'Krang',
-            'Kraid',
-            'Mother Brain',
-            'Samus Aran',
-            'Ridley',
-            'Meta Knight',
-            'Kirby',
-            'Östen',
-            'Sarah Connor',
-            'The Governator',
-            'Austin Powers',
-            'Jimmie Rustler',
+            'superman01',
+            'krueger',
+            'johnnyman',
+            'tomten',
+            'haxxmaster',
+            'skummis',
+            'snigelkott',
+            'mrpackman',
+            '4greatjustice',
+            'buzzsoundyear',
+            'thepunisher',
+            'infinitemass',
+            'destroyed',
+            'slugger',
+            'feeder',
+            'feedee',
+            'immobile',
+            'stuffed',
+            'forcefed',
         ];
 
         for ($i = 0; $i < count($names); ++$i) {
-            $email = 'dev+player.' . ($i + 1) . '@wgrpg.soud.se';
+            $email = 'dev+' . $names[$i] . '@wgrpg.soud.se';
 
             $player = $users->create([
                 'username' => $names[$i],
                 'email' => $email,
-                'password' => $hash->make($email),
+                'password' => $hash->make($names[$i]),
             ]);
 
             $player->roles()->sync($playerRoles);

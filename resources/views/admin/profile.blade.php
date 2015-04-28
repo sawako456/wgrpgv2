@@ -12,12 +12,21 @@
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <h1 class="page-header">@lang('profile.title')</h1>
     @include('components.messages')
-    <form class="form-profile" action="{{ route('admin.profile.update') }}" method="POST" accept-charset="UTF-8">
-      <input type="hidden" name="_token" value="{{ csrf_token() }}">
-      <input type="hidden" name="_method" value="PUT">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="card">
+          <div class="card-actions">
+            <a class="btn btn-lg btn-default" href="{{ route('admin.dashboard') }}">@lang('general.back')</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <form class="form-profile" action="{{ route('admin.profile.update') }}" method="POST" accept-charset="UTF-8">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="_method" value="PUT">
             <h2 class="card-header">@lang('profile.edit.details')</h2>
             <div class="card-content">
               <div class="form-group">
@@ -32,11 +41,28 @@
                 <label class="control-label" for="email_confirmation">@lang('profile.edit.email.confirmation')</label>
                 <input type="email" id="email_confirmation" name="email_confirmation" class="form-control" placeholder="@lang('profile.edit.email.confirmation')">
               </div>
+              <div class="form-group @if($errors->has('time_zone')) has-error @endif">
+                <label class="control-label" for="time_zone">@lang('profile.edit.time_zone')</label>
+                <select id="time_zone" name="time_zone" class="form-control" required>
+                  @foreach($timeZones as $timeZone)
+                    <option value="{{ $timeZone }}" @if($timeZone == $user->time_zone) selected @endif>{{ $timeZone }}</option>
+                  @endforeach
+                </select>
+              </div>
             </div>
-          </div>
+            <div class="card-actions clearfix">
+              <button class="btn btn-lg btn-success pull-right" type="submit" data-updating-text="@lang('general.updating')...">
+                <i class="fa fa-check"></i> @lang('general.update')
+              </button>
+            </div>
+          </form>
         </div>
-        <div class="col-md-6">
-          <div class="card">
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <form class="form-profile" action="{{ route('admin.profile.update') }}" method="POST" accept-charset="UTF-8">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="_method" value="PUT">
             <h2 class="card-header">@lang('profile.edit.password.update')</h2>
             <div class="card-content">
               <div class="form-group @if($errors->has('current_password')) has-error @endif">
@@ -52,22 +78,14 @@
                 <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" placeholder="@lang('profile.edit.password.confirmation')">
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="card clearfix">
-            <div class="card-actions pull-right">
-              <a class="btn btn-lg btn-danger" href="{{ route('admin.dashboard') }}">
-                <i class="fa fa-times"></i> @lang('general.cancel')</a>
-              <button class="btn btn-lg btn-success" type="submit" data-updating-text="@lang('general.updating')...">
+            <div class="card-actions clearfix">
+              <button class="btn btn-lg btn-success pull-right" type="submit" data-updating-text="@lang('general.updating')...">
                 <i class="fa fa-check"></i> @lang('general.update')
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 @stop

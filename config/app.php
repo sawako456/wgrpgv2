@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('APP_TIME_ZONE', 'UTC'),
 
     /*
     |--------------------------------------------------------------------------
@@ -213,6 +213,7 @@ return [
         'URL'       => 'Illuminate\Support\Facades\URL',
         'Validator' => 'Illuminate\Support\Facades\Validator',
         'View'      => 'Illuminate\Support\Facades\View',
+        'TimeZone'  => 'Cryptic\Wgrpg\Support\Facades\TimeZone',
 
     ],
 

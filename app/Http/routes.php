@@ -13,7 +13,7 @@
 
 Route::get('/', [
     'as' => 'dashboard',
-    'uses' => 'DashboardController@getDashboard',
+    'uses' => 'Player\DashboardController@getDashboard',
 ]);
 
 Route::group(['prefix' => 'auth'], function () {

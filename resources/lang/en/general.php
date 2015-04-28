@@ -36,6 +36,7 @@ return [
     'show'         => 'Show',
     'deleted'      => 'Deleted',
     'description'  => 'Description',
+    'character'    => 'Character|Characters',
 
     'num'          => [
 

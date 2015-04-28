@@ -26,6 +26,7 @@ class UpdateRequest extends Request
             'email' => 'email|max:255|confirmed|unique:users,email,' . \Auth::id(),
             'current_password' => 'max:60|passcheck',
             'password' => 'min:8|max:60|confirmed',
+            'time_zone' => 'sometimes|timezone',
         ];
     }
 }

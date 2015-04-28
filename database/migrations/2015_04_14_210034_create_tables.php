@@ -37,11 +37,14 @@ class CreateTables extends Migration
             $table->string('email')->nullable()->unique();
             $table->string('password', 60);
             $table->integer('logins')->default(0);
-            $table->timestamp('last_login_at');
+            $table->datetime('last_login_at')->nullable();
+            $table->string('time_zone')->default('UTC');
 
             $table->rememberToken();
-            $table->timestamps();
-            $table->softDeletes();
+
+            $table->datetime('created_at');
+            $table->datetime('updated_at');
+            $table->datetime('deleted_at')->nullable();
         });
 
         Schema::create('roles', function (Blueprint $table) {
@@ -49,8 +52,9 @@ class CreateTables extends Migration
             $table->string('name')->unique();
             $table->string('label');
 
-            $table->timestamps();
-            $table->softDeletes();
+            $table->datetime('created_at');
+            $table->datetime('updated_at');
+            $table->datetime('deleted_at')->nullable();
         });
 
         Schema::create('role_user', function (Blueprint $table) {
@@ -68,7 +72,8 @@ class CreateTables extends Migration
         Schema::create('password_resets', function (Blueprint $table) {
             $table->string('email')->index();
             $table->string('token')->index();
-            $table->timestamp('created_at');
+
+            $table->datetime('created_at');
         });
 
         /*
@@ -101,8 +106,9 @@ class CreateTables extends Migration
             $table->integer('time')->unsigned()->default(0); // seconds?
             $table->integer('user_id')->unsigned();
 
-            $table->timestamps();
-            $table->softDeletes();
+            $table->datetime('created_at');
+            $table->datetime('updated_at');
+            $table->datetime('deleted_at')->nullable();
 
             $table->foreign('user_id')->references('id')->on('users')
                 ->onUpdate('cascade')
@@ -120,8 +126,9 @@ class CreateTables extends Migration
             $table->tinyInteger('type')->default(0);
             $table->integer('world_id')->unsigned();
 
-            $table->timestamps();
-            $table->softDeletes();
+            $table->datetime('created_at');
+            $table->datetime('updated_at');
+            $table->datetime('deleted_at')->nullable();
 
             $table->foreign('world_id')->references('id')->on('worlds')
                 ->onUpdate('cascade')
@@ -146,8 +153,9 @@ class CreateTables extends Migration
             $table->tinyInteger('state')->default(0);
             $table->integer('map_id')->unsigned();
 
-            $table->timestamps();
-            $table->softDeletes();
+            $table->datetime('created_at');
+            $table->datetime('updated_at');
+            $table->datetime('deleted_at')->nullable();
 
             $table->foreign('map_id')->references('id')->on('maps')
                 ->onUpdate('cascade')
@@ -169,8 +177,9 @@ class CreateTables extends Migration
             $table->integer('trigger_value_2')->nullable();
             $table->integer('trigger_value_3')->nullable();
 
-            $table->timestamps();
-            $table->softDeletes();
+            $table->datetime('created_at');
+            $table->datetime('updated_at');
+            $table->datetime('deleted_at')->nullable();
         });
 
         /*

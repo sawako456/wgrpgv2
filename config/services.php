@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => 'Cryptic\\WGRGP\User',
+        'model'  => 'Cryptic\WGRGP\Lib\Domain\Entities\User',
         'secret' => '',
     ],
 

@@ -21,6 +21,7 @@ return [
             'confirmation' => 'Confirm new password',
 
         ],
+        'time_zone' => 'Time zone',
 
     ],
     'update' => [

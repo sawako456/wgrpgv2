@@ -3,6 +3,7 @@
 use Cryptic\Wgrpg\Contracts\Repositories\User\Repository as UserRepositoryContract;
 use Cryptic\Wgrpg\Http\Controllers\Controller;
 use Cryptic\Wgrpg\Http\Requests\Admin\Profile\UpdateRequest;
+use DateTimeZone;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Hashing\Hasher;
 use Illuminate\Contracts\View\Factory as View;
@@ -47,8 +48,9 @@ class ProfileController extends Controller
     public function edit(View $view)
     {
         $user = $this->auth->user();
+        $timeZones = DateTimeZone::listIdentifiers();
 
-        return $view->make('admin.profile', compact('user'));
+        return $view->make('admin.profile', compact('user', 'timeZones'));
     }
 
     /**
@@ -64,8 +66,9 @@ class ProfileController extends Controller
         $user = $this->auth->user();
         $email = $request->get('email');
         $password = $request->get('password');
+        $timeZone = $request->get('time_zone');
 
-        if (empty($email) && empty($password)) {
+        if (empty($email) && empty($password) && ($timeZone == $user->time_zone)) {
             return redirect()->route('admin.profile.edit')
                 ->with('infos', new MessageBag(['Nothing was updated.']));
         }
@@ -77,6 +80,8 @@ class ProfileController extends Controller
         if (!empty($password)) {
             $user->password = $hash->make($password);
         }
+
+        $user->time_zone = $timeZone;
 
         if ($this->users->save($user)) {
             return redirect()->route('admin.profile.edit')

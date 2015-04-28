@@ -1,5 +1,6 @@
-<?php namespace Cryptic\Wgrpg\Http\Controllers;
+<?php namespace Cryptic\Wgrpg\Http\Controllers\Player;
 
+use Cryptic\Wgrpg\Http\Controllers\Controller;
 use Illuminate\Contracts\View\Factory as View;
 
 class DashboardController extends Controller
